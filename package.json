@@ -1,0 +1,17 @@
+{
+  "name": "composer-components",
+  "version": "1.0.0",
+  "description": "Reusable UI Components for Composer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gen": "bin/index.js"
+  },
+  "author": "Jon Parsons",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.3.14"
+  }
+}
