@@ -29,6 +29,8 @@ if (fs.existsSync(folderName)) {
   process.exit(1);
 }
 
+mkdirp.sync(folderName)
+
 //template data
 var tmplData = {
   componentName: componentName
