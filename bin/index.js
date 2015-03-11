@@ -38,7 +38,7 @@ var tmplData = {
 
 //bootstrap file
 var bootstrapTmplData = fs.readFileSync(path.resolve(__dirname, 'templates/bootstrap.tmpl')).toString();
-var bootstrapFilelData = _.template(bootstrapTmplData)(tmplData)
+var bootstrapFileData = _.template(bootstrapTmplData)(tmplData)
 var bootstrapFileName = path.resolve(process.cwd(), componentName + '.js');
 
 //directive file
