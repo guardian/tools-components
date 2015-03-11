@@ -5,6 +5,7 @@ var fs = require('fs');
 var path = require('path');
 var _ = require('lodash');
 var mkdirp = require('mkdirp');
+var util = require('util');
 
 //init CLI options
 program
@@ -47,3 +48,5 @@ var moduleFileData = _.template(moduleTmplData)(tmplData);
 
 fs.writeFileSync(fileName, moduleFileData, 'utf8');
 fs.writeFileSync(bootstrapFileName, bootstrapFileData, 'utf8');
+
+console.log(util.format('genrated %s successfully', componentName));
