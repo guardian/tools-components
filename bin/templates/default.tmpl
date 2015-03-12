@@ -1,7 +1,11 @@
-var <%= componentName %> = function <%= componentName %>(){
+import angular from 'angular';
+
+var <%= componentName %> = angular.module('<%= componentName %>', []);
+
+<%= componentName %>.directive('<%= componentName %>', function <%= componentName %>(){
   return {
 
   };
-};
+});
 
 export default <%= componentName %>;
