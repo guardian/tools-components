@@ -1,3 +1,3 @@
-import icons from  './lib/icons';
+import grid from  './lib/grid';
 
-export default icons
+export default grid;
