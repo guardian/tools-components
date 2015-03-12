@@ -26,8 +26,10 @@
       "packages": "jspm_packages"
     },
     "dependencies": {
-      "angular": "npm:angular@^1.3.14",
-      "jspm": "^0.14.0"
+      "angular": "github:angular/bower-angular@^1.3.14",
+      "cutandpastey/plugin-svg": "github:cutandpastey/plugin-svg@^0.2.0",
+      "jspm": "^0.14.0",
+      "svg": "github:cutandpastey/plugin-svg@^0.2.0"
     }
   }
 }

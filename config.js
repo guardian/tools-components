@@ -10,7 +10,8 @@ System.config({
 
 System.config({
   "map": {
-    "angular": "npm:angular@1.3.14",
+    "angular": "github:angular/bower-angular@1.3.14",
+    "svg": "github:cutandpastey/plugin-svg@0.2.0",
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
     },
