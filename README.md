@@ -5,8 +5,8 @@ Generators
 ----------
 
 To setup file generators you must:
-- Clone the repo
-- Set into the repo
+- clone the repo
+- step into the repo
 - run `npm install`
 - run `npm link`
 
