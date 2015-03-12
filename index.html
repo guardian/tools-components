@@ -9,22 +9,26 @@
     }
   </style>
 </head>
-<body ng-app="gu-components">
-
-<icon type="clock-active"></icon>
-<icon type="clock-disabled"></icon>
-<icon type="info-active"></icon>
-<icon type="info-disabled"></icon>
-<icon type="publish-active"></icon>
-<icon type="publish-disabled"></icon>
-<icon type="preview-active"></icon>
-
-
-
+<body>
+<main ng-app="gu-components">
+  <row>
+    <column span="4">
+      Sidebar
+    </column>
+    <column span="8">
+      <icon type="clock-active"></icon>
+      <icon type="clock-disabled"></icon>
+      <icon type="info-active"></icon>
+      <icon type="info-disabled"></icon>
+      <icon type="publish-active"></icon>
+      <icon type="publish-disabled"></icon>
+      <icon type="preview-active"></icon>
+    </column>
+  </row>
+</main>
+<!-- LOAD JS -->
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
-<script>
-  System.import("main");
-</script>
+<script>System.import("main");</script>
 </body>
 </html>
