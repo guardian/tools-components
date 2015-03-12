@@ -1,12 +1,3 @@
-import angular from 'angular'
+import <%= componentName %> from  './lib/<%= componentName %>';
 
-var <%= componentName %> = angular.module('<%= componentName %>', []);
-
-<%= componentName %>.directive('<%= componentName %>', function <%= componentName %>(){
-  return {
-    //your code goes here
-  };
-});
-
-export default <%= componentName %>;
-
+export default <%= componentName %>
