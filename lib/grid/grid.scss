@@ -1,10 +1,10 @@
+@import 'styles.json';
+
 .row{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
-$num-of-columns: 12;
 
 @for $i from 1 through $num-of-columns {
   .col-#{$i}{
