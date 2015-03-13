@@ -1,5 +1,10 @@
 Composer UI Components
 
+Configuration
+-------------
+All config for BOTH `js` and `scss` are kept in `./config`.
+These json files are parsed into scss variables so can be shared easily.
+DO NOT add nested variables as ONLY top level keys are parsed.
 
 Generators
 ----------
