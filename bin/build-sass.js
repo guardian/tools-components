@@ -6,7 +6,7 @@ var q = require('q');
 var glob = require('glob');
 var sass = require('node-sass');
 var fs = require('fs');
-
+var autoprefixer = require('autoprefixer')
 
 var _glob = q.denodeify(glob);
 
@@ -29,6 +29,10 @@ _glob(path)
     var compiledCss = sass.renderSync({
       data: sassContent
     }).css.toString();
+
+    //auto prefix the css
+    compiledCss = autoprefixer.process(compiledCss).css;
+
     //write the sass files
     fs.writeFileSync(outputFilePath, compiledCss, 'utf8');
 
