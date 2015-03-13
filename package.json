@@ -20,7 +20,6 @@
   "devDependencies": {
     "babel": "^4.7.8",
     "commander": "^2.6.0",
-    "flatten-object": "^1.1.0",
     "glob": "^5.0.2",
     "lodash": "^3.5.0",
     "mkdirp": "^0.5.0",
