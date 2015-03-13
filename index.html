@@ -29,6 +29,13 @@
 <!-- LOAD JS -->
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
-<script>System.import("main");</script>
+<script>
+  System
+    .import("main")
+    .catch(function(err){
+      console.log('System.js load error -->')
+      console.log(err);
+    });
+</script>
 </body>
 </html>
