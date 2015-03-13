@@ -9,22 +9,33 @@
     }
   </style>
 </head>
-<body ng-app="gu-components">
-
-<icon type="clock-active"></icon>
-<icon type="clock-disabled"></icon>
-<icon type="info-active"></icon>
-<icon type="info-disabled"></icon>
-<icon type="publish-active"></icon>
-<icon type="publish-disabled"></icon>
-<icon type="preview-active"></icon>
-
-
-
+<body>
+<main ng-app="gu-components">
+  <gu-row>
+    <gu-column span="2">
+      Sidebar
+    </gu-column>
+    <gu-column span="10">
+      <gu-icon type="clock-active"></gu-icon>
+      <gu-icon type="clock-disabled"></gu-icon>
+      <gu-icon type="info-active"></gu-icon>
+      <gu-icon type="info-disabled"></gu-icon>
+      <gu-icon type="publish-active"></gu-icon>
+      <gu-icon type="publish-disabled"></gu-icon>
+      <gu-icon type="preview-active"></gu-icon>
+    </gu-column>
+  </gu-row>
+</main>
+<!-- LOAD JS -->
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 <script>
-  System.import("main");
+  System
+    .import("main")
+    .catch(function(err){
+      console.log('System.js load error -->')
+      console.log(err);
+    });
 </script>
 </body>
 </html>
