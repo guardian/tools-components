@@ -5,9 +5,9 @@ Configuration
 All config for BOTH `js` and `scss` are kept in `./config`.
 These json files are parsed into scss variables so can be shared easily.
 
-DO NOT add nested variables as ONLY top level keys are parsed.
-ONLY add json files to `./config` folder
-import json files by name only. eg `@import "styles.json"`. File paths are ignored.
+- DO NOT add nested variables as ONLY top level keys are parsed.
+- ONLY add json files to `./config` folder
+- Import json files by name only. eg `@import "styles.json"`. File paths are ignored.
 
 
 File Templates (Generators)
