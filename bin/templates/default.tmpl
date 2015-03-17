@@ -2,7 +2,7 @@ import angular from 'angular';
 
 var <%= componentName %> = angular.module('<%= componentName %>', []);
 
-<%= componentName %>.directive('gu<%= componentName %>', function <%= componentName %>Directive(){
+<%= componentName %>.directive('gu<%= capitalizeFirstChar(componentName) %>', function <%= componentName %>Directive(){
   return {
 
   };

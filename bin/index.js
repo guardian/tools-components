@@ -6,6 +6,7 @@ var path = require('path');
 var _ = require('lodash');
 var mkdirp = require('mkdirp');
 var util = require('util');
+var capitalizeFirstChar = require('capitalize-first-char');
 
 //init CLI options
 program
@@ -34,7 +35,8 @@ mkdirp.sync(folderName)
 
 //template data
 var tmplData = {
-  componentName: componentName
+  componentName: componentName,
+  capitalizeFirstChar: capitalizeFirstChar
 }
 
 //bootstrap file
