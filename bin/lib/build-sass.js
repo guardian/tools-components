@@ -23,14 +23,6 @@ export default () => {
 
       //the meat and gravy of the operation
 
-      //check we have a css directory in the project (this should be gitignored)
-      let cssDir = path.resolve(__dirname, '../../css');
-      //sadly we have to fallback to sync as fs.exists' callback only accepts the bool :(
-      if (!fs.existsSync(cssDir)) {
-        //if there is no ./css directory we make one
-        yield pMkdirP(cssDir);
-      }
-
       //get all the sass file paths
       let sassPath  = path.resolve(__dirname, '../../sass/components/**/*.scss');
       let sassFiles = yield pGlob(sassPath);
