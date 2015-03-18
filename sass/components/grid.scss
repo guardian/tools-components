@@ -1,0 +1,12 @@
+@import 'mixins/grid/column.scss';
+@import 'mixins/grid/row.scss';
+
+.row{
+  @include row();
+}
+
+@for $i from 1 through $num-of-columns {
+  .col-#{$i}{
+    @include column($i);
+  }
+}

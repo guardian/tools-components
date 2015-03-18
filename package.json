@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "description": "Reusable UI Components for Composer",
-  "main": "index.js",
+  "main": "lib/gu-components",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-sass": "wr ./bin/build-sass.js ./lib/**/*.scss"
+    "watch-sass": "wr ./bin/build-sass-cli ./sass/**/*.scss",
+    "postinstall": "jspm install -y"
   },
   "bin": {
-    "gen": "bin/index.js"
+    "gen": "bin/index"
   },
   "author": "Jon Parsons",
   "license": "ISC",
@@ -40,7 +41,6 @@
       "angular": "github:angular/bower-angular@^1.3.14",
       "css": "github:systemjs/plugin-css@^0.1.6",
       "cutandpastey/plugin-svg": "github:cutandpastey/plugin-svg@^0.2.0",
-      "jspm": "^0.14.0",
       "svg": "github:cutandpastey/plugin-svg@^0.2.0"
     }
   }
