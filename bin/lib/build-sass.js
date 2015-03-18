@@ -28,7 +28,7 @@ export default () => {
       let sassFiles = yield pGlob(sassPath);
 
       //replace the first occurrence of scss with css giving us an output path
-      let outputFiles = sassFiles.map((sassFilePath)=> sassFilePath.replace(/sass/, 'css'));
+      let outputFiles = sassFiles.map((sassFilePath)=> sassFilePath.replace(/sass/, 'styles'));
 
       //get all the file contents
       let sassData = yield Q.all(sassFiles.map((sassFilePath)=> pReadFile(sassFilePath, 'utf8')));
@@ -45,7 +45,8 @@ export default () => {
       //build our objects for rendering to css files
       let outputs = sassFiles.reduce((last, sassFilePath, index)=> {
         last.push({
-          path: outputFiles[index],
+          //replace the output .scss to .css
+          path: outputFiles[index].replace(/scss$/, 'css'),
           data: cssData[index]
         });
         return last;
