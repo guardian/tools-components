@@ -28,6 +28,8 @@ if (program.sassComponent) {
     process.exit(1);
   }
 
+
+  generateMixin(mixinName, program.component);
   generateSassComponent(mixinName, program.component);
 
 }
