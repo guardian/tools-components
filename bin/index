@@ -28,7 +28,7 @@ if (program.sassComponent) {
     process.exit(1);
   }
 
-  generateSassComponent(program.component, mixinName);
+  generateSassComponent(mixinName, program.component);
 
 }
 
