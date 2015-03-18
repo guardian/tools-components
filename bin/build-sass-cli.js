@@ -1,5 +1,13 @@
 #!/usr/bin/env node
-//get es6 joy times
+require('babel/register');
+
+//to get es6 joy we need to require our function in
+//as babel/register overrides the require function.
+var buildSass = require('./lib/build-sass');
+buildSass();
+
+
+/*
 
 //deps
 var fs = require('fs');
@@ -12,7 +20,7 @@ var sass = require('node-sass');
 var autoprefixer = require('autoprefixer')
 var _glob = q.denodeify(glob);
 
-var sassFiles = process.cwd() + '/lib/**/*.scss';
+var sassFiles = process.cwd() + '/lib/**//*.scss';
 
 _glob(sassFiles)
 .then(function(files){
@@ -47,3 +55,4 @@ _glob(sassFiles)
   console.log('-----------------------');
   process.exit(1);
 })
+*/
