@@ -1,23 +1,49 @@
 #!/usr/bin/env node
 require('babel/register');
 var program = require('commander');
-var generateMixin = require('./lib/generate-mixin');
 var pkgInfo = require('../package.json');
 var colors = require('colors');
+
+var generateMixin = require('./lib/generate-mixin');
+var generateSassComponent = require('./lib/generate-sass-component');
 
 //init CLI options
 program
   .version(pkgInfo.version)
   .option('-m, --mixin [mixin-name]', 'Add a new mixin')
   .option('-c, --component [component-name]', 'Add a new mixin')
+  .option('-s, --sass-component [component-name]', 'Add a new mixin')
   .parse(process.argv);
 
+
+// ------------------ SASS COMPONENT
+if (program.sassComponent) {
+
+  //if no mixin name is provided use the component name
+  var mixinName = program.mixin ? program.mixin : program.componentName;
+
+  //if someone generates a sass-component without a component name
+  if (! program.component) {
+    console.log('A valid component name must be used when generating a sass component'.red);
+    process.exit(1);
+  }
+
+  generateSassComponent(program.component, mixinName);
+
+  process.exit(0);
+}
+
+// ---------------- MIXIN
 if (program.mixin) {
+
+  //if someone generates a mixin without a component name
   if (! program.component) {
     console.log('A valid component name must be used when generating a mixin'.red);
     process.exit(1);
   }
+
   generateMixin(program.mixin, program.component);
+  process.exit(0);
 }
 
 

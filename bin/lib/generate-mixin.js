@@ -41,11 +41,7 @@ export default (mixinName, componentName) => {
 
       yield pWriteFile(mixinFileName, fileData, 'utf8');
 
-      console.log('-----------------------');
       console.log(`${mixinFileName} created`.green);
-      console.log('-----------------------');
-      process.exit(0);
-
     }
     catch(e){
       console.log('-----------------------');
