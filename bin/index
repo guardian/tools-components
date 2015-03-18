@@ -3,15 +3,21 @@ require('babel/register');
 var program = require('commander');
 var generateMixin = require('./lib/generate-mixin');
 var pkgInfo = require('../package.json');
+var colors = require('colors');
 
 //init CLI options
 program
   .version(pkgInfo.version)
-  .option('-m, --mixin [componentName]', 'Add a new mixin')
+  .option('-m, --mixin [mixin-name]', 'Add a new mixin')
+  .option('-c, --component [component-name]', 'Add a new mixin')
   .parse(process.argv);
 
 if (program.mixin) {
-  generateMixin(program.mixin);
+  if (! program.component) {
+    console.log('A valid component name must be used when generating a mixin'.red);
+    process.exit(1);
+  }
+  generateMixin(program.mixin, program.component);
 }
 
 
