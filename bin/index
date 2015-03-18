@@ -1,6 +1,22 @@
 #!/usr/bin/env node
-var pkgInfo = require('../package.json');
+require('babel/register');
 var program = require('commander');
+var generateMixin = require('./lib/generate-mixin');
+var pkgInfo = require('../package.json');
+
+//init CLI options
+program
+  .version(pkgInfo.version)
+  .option('-m, --mixin [componentName]', 'Add a new mixin')
+  .parse(process.argv);
+
+if (program.mixin) {
+  generateMixin(program.mixin);
+}
+
+
+
+/*
 var fs = require('fs');
 var path = require('path');
 var _ = require('lodash');
@@ -8,17 +24,6 @@ var mkdirp = require('mkdirp');
 var util = require('util');
 var capitalizeFirstChar = require('capitalize-first-char');
 
-//init CLI options
-program
-.version(pkgInfo.version)
-.option('-n, --new [componentName]', 'Add a new component')
-.parse(process.argv);
-
-
-if (!program.new) {
-  console.log('-n is a required parameter. try gen -h for more details');
-  process.exit(1);
-}
 
 //configuration
 var componentName = program.new;
@@ -52,3 +57,4 @@ fs.writeFileSync(fileName, moduleFileData, 'utf8');
 fs.writeFileSync(bootstrapFileName, bootstrapFileData, 'utf8');
 
 console.log(util.format('genrated %s successfully', componentName));
+*/

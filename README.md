@@ -78,5 +78,6 @@ To setup file generators you must:
 
 After which you will have `gen` available on your path
 
-__File__
-`gen -n {component-name}`
+__Mixin__
+`gen -m {mixin-name}`
+
