@@ -1,18 +1,22 @@
 Composer UI Components
+---------
 
-File Templates (Generators)
-----------
+#### Project Structure
 
-To setup file generators you must:
-- clone the repo
-- step into the repo
-- run `npm install`
-- run `npm link`
+Roughly speaking a component can be classified as being made up of four distinct pieces:
 
-After which you will have `gen` available on your path
+__A sass mixin.__
+- This lives in `sass/mixins/{component-name}/{mixin-name}` and can be called to decorate a given CSS class with rules.
 
-__File__
-`gen -n {component-name}`
+__A sass component.__
+- This lives in `sass/components/{component-name}`. It contains given CSS classes such as `.btn` etc. Generally speaking a `sass` component will depend on a mixin.
+
+__An angular module (directive)__
+- This lives in `lib/{component-name}/index.js`. It contains specific JS behaviour. In general it will expose an angular module with a linked directive and/or controller.
+
+__A bootstrap file__
+- This lives in `./{component-name}`. It will allow a user to require `composer-components/{component-name}` within their application. It will require and expose the anugular module as well as requiring the built css.
+
 
 
 Importing Components into your Project
@@ -51,3 +55,28 @@ You will need to put `composer-components/sass` into your `includePaths`. You ca
 __4,__ I've already got a bunch of CSS classes I can't change:
 
 Every component within `sass/components` uses a mixin. Put `composer-components/sass` into your `includePaths` then you can `@import "mixins/{component-name}/{mixin-name}"`.
+
+
+Getting started developing components
+-----------
+- Clone the repo
+- Step inside the repo
+- Run `npm install`
+- Run `npm run watch`
+- Generate a component structure with a file generator
+- Get dev'in!
+
+
+File Templates (Generators)
+----------
+
+To setup file generators you must:
+- clone the repo
+- step into the repo
+- run `npm install`
+- run `npm link`
+
+After which you will have `gen` available on your path
+
+__File__
+`gen -n {component-name}`
