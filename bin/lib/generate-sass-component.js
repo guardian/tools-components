@@ -1,38 +1,42 @@
 import Q      from 'q';
-import path   from 'path';
 import fs     from 'fs';
+import path   from 'path';
 import _      from 'lodash';
+import colors from 'colors';
+import mkdirp from 'mkdirp';
 
-var pReadFile  = Q.denodeify(fs.readFile);
-var pWriteFile = Q.denodeify(fs.writeFile);
+let pReadFile   = Q.denodeify(fs.readFile);
+let pWriteFile  = Q.denodeify(fs.writeFile);
+let pMkdirP     = Q.denodeify(mkdirp);
 
 export default (componentName, mixinName) => {
+
   return Q.async(function* (){
-    try{
+    try {
 
       //tell the user whats going on
       console.log(`Generating sass/components/${componentName}.scss`.green);
 
-      //check if the component already exists
-      let sassComponentName = path.resolve(__dirname, '../../sass/components/', componentName + '.scss');
-      if (fs.existsSync(sassComponentName)) {
-        console.log(`${sassComponentName} exists`.red);
+      //if the component exists ...bail out
+      let componentFileName = path.resolve(__dirname, '../../sass/components/', componentName + '.scss');
+      if (fs.existsSync(componentFileName)) {
+        console.log(`${componentFileName} already exists`);
         process.exit(1);
       }
 
-      let templatePath = path.resolve(__dirname, '../templates/sass-component.tmpl');
+      //get the template
+      var templatePath = path.resolve(__dirname, '../templates/sass-component.tmpl');
       let template = yield pReadFile(templatePath, 'utf8');
+
+      //get the file template
       template = _.template(template);
-      //compile the template
-      let fileData = template({
-        componentName: componentName,
-        mixinName: mixinName
+      var fileData = template({
+        mixinName: mixinName,
+        componentName: componentName
       });
 
-      yield pWriteFile(sassComponentName, fileData, 'utf8');
-
-      console.log(`${sassComponentName} created`.green);
-
+      yield pWriteFile(componentFileName, fileData, 'utf8');
+      console.log(`${componentFileName} created`.green);
 
     }
     catch(e){
@@ -41,5 +45,7 @@ export default (componentName, mixinName) => {
       console.log('-----------------------');
       process.exit(1);
     }
+
   })().done();
+
 }

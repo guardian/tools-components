@@ -20,7 +20,7 @@ program
 if (program.sassComponent) {
 
   //if no mixin name is provided use the component name
-  var mixinName = program.mixin ? program.mixin : program.componentName;
+  var mixinName = program.mixin ? program.mixin : program.component;
 
   //if someone generates a sass-component without a component name
   if (! program.component) {
@@ -30,7 +30,6 @@ if (program.sassComponent) {
 
   generateSassComponent(program.component, mixinName);
 
-  process.exit(0);
 }
 
 // ---------------- MIXIN
@@ -43,7 +42,6 @@ if (program.mixin) {
   }
 
   generateMixin(program.mixin, program.component);
-  process.exit(0);
 }
 
 
