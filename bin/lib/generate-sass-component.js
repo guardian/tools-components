@@ -26,7 +26,7 @@ export default (componentName, mixinName) => {
       //compile the template
       let fileData = template({
         componentName: componentName,
-        mixinName: mixinName;
+        mixinName: mixinName
       });
 
       yield pWriteFile(sassComponentName, fileData, 'utf8');
