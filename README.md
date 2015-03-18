@@ -50,4 +50,4 @@ You will need to put `composer-components/sass` into your `includePaths`. You ca
 
 __4,__ I've already got a bunch of CSS classes I can't change:
 
-Every component within `sass/components` uses a mixin. Put `composer-components/sass` into your `includePaths` then you can `@import "mixins/{component-name}"`.
+Every component within `sass/components` uses a mixin. Put `composer-components/sass` into your `includePaths` then you can `@import "mixins/{component-name}/{mixin-name}"`.

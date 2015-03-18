@@ -1,5 +1,5 @@
-@import 'mixins/column.scss';
-@import 'mixins/row.scss';
+@import 'mixins/grid/column.scss';
+@import 'mixins/grid/row.scss';
 
 .row{
   @include row();
