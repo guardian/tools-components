@@ -18,9 +18,9 @@ __File__
 Importing Components into your Project
 -----------
 
-There are multiple ways to import all/individual components into you application
+There are multiple ways to import all/individual components into your application.
 
-1. Give me all the things:
+__1,__ Give me all the things:
 
 You need to import the `gu-components` angular module.
 
@@ -28,7 +28,7 @@ You need to import the `gu-components` angular module.
 import components from 'composer-components';
 ```
 
-2. I'm using angular but I only want some components:
+__2,__ I'm using angular but I only want some components:
 
 You can import a module at a time
 
@@ -44,10 +44,10 @@ import {component-name} from 'composer-components/lib/{component-name}/index'
 
 which comes CSS free.
 
-3. I'm not using angular but I want the CSS:
+__3,__ I'm not using angular but I want the CSS:
 
 You will need to put `composer-components/sass` into your `includePaths`. You can then `@import "components/{component-name}"` in your main scss file.
 
-4. I've already got a bunch of CSS classes I can't change:
+__4,__ I've already got a bunch of CSS classes I can't change:
 
 Every component within `sass/components` uses a mixin. Put `composer-components/sass` into your `includePaths` then you can `@import "mixins/{component-name}"`.
