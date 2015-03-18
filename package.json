@@ -6,7 +6,8 @@
   "main": "lib/gu-components",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-sass": "wr ./bin/build-sass-cli ./sass/**/*.scss"
+    "watch-sass": "wr ./bin/build-sass-cli ./sass/**/*.scss",
+    "postinstall": "jspm install -y"
   },
   "bin": {
     "gen": "bin/index"
