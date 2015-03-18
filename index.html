@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Composer Components</title>
+  <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
   <style>
     body {
+      padding: 10px;
       background: #ececec;
+    }
+    * {
+      margin: 0;
+      padding: 0;
     }
   </style>
 </head>
@@ -23,6 +29,22 @@
       <gu-icon type="publish-active"></gu-icon>
       <gu-icon type="publish-disabled"></gu-icon>
       <gu-icon type="preview-active"></gu-icon>
+
+      <h2>Buttons</h2>
+
+      <gu-row>
+        <gu-column span="12">
+          <gu-btn>Button</gu-btn>
+          <gu-btn variant="light">Button</gu-btn>
+          <gu-btn variant="active">Button</gu-btn>
+          <gu-btn variant="danger">Button</gu-btn>
+          <gu-btn variant="mortal-danger">Button</gu-btn>
+          <gu-btn variant="active" size="small">Button</gu-btn>
+          <gu-btn variant="active" size="large">Button</gu-btn>
+          <gu-btn variant="active" size="very-large">Button</gu-btn>
+        </gu-column>
+      </gu-row>
+
     </gu-column>
   </gu-row>
 </main>
