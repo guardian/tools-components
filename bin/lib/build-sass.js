@@ -51,7 +51,7 @@ export default () => {
       cssData = cssData.map((data)=> autoprefixer.process(data.css.toString()).css);
 
       //build our objects for rendering to css files
-      var outputs = sassFiles.reduce((last, sassFilePath, index)=> {
+      let outputs = sassFiles.reduce((last, sassFilePath, index)=> {
         last.push({
           path: outputFiles[index],
           data: cssData[index]
