@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Composer Components</title>
+  <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
   <style>
     body {
+      padding: 10px;
       background: #ececec;
+    }
+    * {
+      margin: 0;
+      padding: 0;
     }
   </style>
 </head>
@@ -23,6 +29,64 @@
       <gu-icon type="publish-active"></gu-icon>
       <gu-icon type="publish-disabled"></gu-icon>
       <gu-icon type="preview-active"></gu-icon>
+
+      <h2>Buttons</h2>
+      <gu-row>
+        <button class="btn">Link</button>
+        <a href="#" class="btn">Link</a>
+        <button disabled class="btn">Link</button>
+        <a disabled href="#" class="btn">Link</a>
+      </gu-row>
+
+      <gu-row>
+        <button class="btn--light">Link</button>
+        <a href="#" class="btn--light">Link</a>
+        <button disabled class="btn--light">Link</button>
+        <a disabled href="#" class="btn--light">Link</a>
+      </gu-row>
+
+      <gu-row>
+        <button class="btn--active">Link</button>
+        <a href="#" class="btn--active">Link</a>
+        <button disabled class="btn--active">Link</button>
+        <a disabled href="#" class="btn--active">Link</a>
+      </gu-row>
+
+      <gu-row>
+        <button class="btn--danger">Link</button>
+        <a href="#" class="btn--danger">Link</a>
+        <button disabled class="btn--danger">Link</button>
+        <a disabled href="#" class="btn--danger">Link</a>
+      </gu-row>
+
+      <gu-row>
+        <button class="btn--mortal-danger">Link</button>
+        <a href="#" class="btn--mortal-danger">Link</a>
+        <button disabled class="btn--mortal-danger">Link</button>
+        <a disabled href="#" class="btn--mortal-danger">Link</a>
+      </gu-row>
+
+      <gu-row>
+        <button class="btn btn--small">Link</button>
+        <a href="#" class="btn btn--small">Link</a>
+        <button disabled class="btn btn--small">Link</button>
+        <a disabled href="#" class="btn btn--small">Link</a>
+      </gu-row>
+
+      <gu-row>
+        <button class="btn btn--large">Link</button>
+        <a href="#" class="btn btn--large">Link</a>
+        <button disabled class="btn btn--large">Link</button>
+        <a disabled href="#" class="btn btn--large">Link</a>
+      </gu-row>
+
+      <gu-row>
+        <button class="btn btn--very-large">Link</button>
+        <a href="#" class="btn btn--very-large">Link</a>
+        <button disabled class="btn btn--very-large">Link</button>
+        <a disabled href="#" class="btn btn--very-large">Link</a>
+      </gu-row>
+
     </gu-column>
   </gu-row>
 </main>
