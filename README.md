@@ -26,7 +26,7 @@ __A bootstrap file.__
 Importing Components into your Project
 -----------
 
-There are multiple ways to import all/individual components into your application. To begin install with:
+There are multiple ways to import all/individual components into your application. To begin, install with:
 
 ```jspm install composer-components=github:guardian/tools-components```
 
@@ -120,7 +120,7 @@ Development patterns
 
 __Directives__
 
-Feel free to restrict directives as you wish. In general tags should be prioritised over attributes as this provides a clearer DSL, however directives can you both (see the box component as an example).
+Feel free to restrict directives as you wish. In general tags should be prioritised over attributes as this provides a clearer DSL, however directives can use both (see the box component as an example).
 
 Variations on components should be specified with a `variant={variant-name}` pattern. `gu-icons` are a good example of this pattern. These variations are usually restricted to behaviour or state. Visual differences in style should be communicated via a `skin={skin-type}` attribute.
 
@@ -143,7 +143,8 @@ therefore we get:
 If a component requires a subtle variation like a change of color you can use a skin attribute.  This allows styling like so:
 
 ``` css
-.box--primart[skin=large] {}
+.box--primary[skin="large"] {}
+.box--primary[skin="large,light"] {}
 ```
 
 Which allow many possible variations.
