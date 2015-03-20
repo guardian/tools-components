@@ -148,3 +148,6 @@ If a component requires a subtle variation like a change of color you can use a 
 ```
 
 Which allow many possible variations.
+
+__Skins__
+All skin specific variables are kept in `sass/skins/{skin-name}.scss`. Skins can apply to many components. All skin variables should be prefixed with `$_{skin-name}-{component-name}-{variable-name}`.
