@@ -48,6 +48,8 @@ if (commandType === 'new') {
   else {
     console.log('You must specify a valid component type'.red);
   }
+} else {
+  console.log('You must use the "new" keyword when generating a component, please see readme for details'.red);
 }
 
 /*
