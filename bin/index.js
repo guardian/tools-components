@@ -32,6 +32,7 @@ if (commandType === 'new') {
   else if (componentType === 'sass') {
     var mixinName = program.mixinName ? program.mixinName : program.componentName;
     generateMixin(mixinName, program.componentName);
+    generateSassComponent(program.componentName);
   }
   //generates a new directive
   else if (componentType === 'directive') {
@@ -39,6 +40,9 @@ if (commandType === 'new') {
   }
   //genrate a new component
   else if (componentType === 'component') {
+    generateMixin(program.componentName, program.componentName);
+    generateSassComponent(program.componentName);
+    genrateDirective(program.componentName);
     generateBootstrap(program.componentName);
   }
   else {
