@@ -84,7 +84,7 @@ __Mixin__
 This will generate a mixin within `sass/mixin/{component-name}/{mixin-name}.scss`
 
 __Sass component__
-`gen -s -m [mixin-name] -c {component-name}`
+`gen new sass -m {mixin-name} -c {component-name}`
 
 This will generate a sass component within `sass/components/{component-name}.scss`
 AND a mixin within `sass/mixins/{component-name}/{mixin-name}.scss`
