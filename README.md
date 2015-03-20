@@ -79,16 +79,31 @@ To setup file generators you must:
 After which you will have `gen` available on your path
 
 __Mixin__
+
 `gen new mixin -m {mixin-name} -c {component-name}`
 
 This will generate a mixin within `sass/mixin/{component-name}/{mixin-name}.scss`
 
 __Sass component__
+
 `gen new sass -m {mixin-name} -c {component-name}`
 
 This will generate a sass component within `sass/components/{component-name}.scss`
 AND a mixin within `sass/mixins/{component-name}/{mixin-name}.scss`
 
 __Angular directive__
+
 `gen new directive -c {component-name}`
+
 This will generate an angular module within `lib/{component-name}/index.js`
+
+__Full component__
+
+`gen new component -c {component-name}`
+
+This will genearte:
+
+- A mixin in `sass/mixins/{component-name}/{component-name}.scss`
+- A sass component in `sass/components/{component-name}.scss`
+- An angular directive in `lib/{component-name}/index.js`
+- A bootstrap file (for single component importing) in `./{component-name}.js`
