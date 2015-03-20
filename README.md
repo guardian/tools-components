@@ -86,8 +86,9 @@ This will generate a mixin within `sass/mixin/{component-name}/{mixin-name}.scss
 __Sass component__
 `gen new sass -m {mixin-name} -c {component-name}`
 
-__Angular directive__
-`gen new directive -c {component-name}`
-
 This will generate a sass component within `sass/components/{component-name}.scss`
 AND a mixin within `sass/mixins/{component-name}/{mixin-name}.scss`
+
+__Angular directive__
+`gen new directive -c {component-name}`
+This will generate an angular module within `lib/{component-name}/index.js`
