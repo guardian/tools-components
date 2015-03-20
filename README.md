@@ -1,7 +1,11 @@
 Composer UI Components
 ---------
 
-#### Project Structure
+UI components for your project.
+
+
+Project Structure
+-----------
 
 Roughly speaking a component can be classified as being made up of four distinct pieces:
 
@@ -11,10 +15,10 @@ __A sass mixin.__
 __A sass component.__
 - This lives in `sass/components/{component-name}`. It contains given CSS classes such as `.btn` etc. Generally speaking a `sass` component will depend on a mixin.
 
-__An angular module (directive)__
+__An angular module (directive).__
 - This lives in `lib/{component-name}/index.js`. It contains specific JS behaviour. In general it will expose an angular module with a linked directive and/or controller.
 
-__A bootstrap file__
+__A bootstrap file.__
 - This lives in `./{component-name}`. It will allow a user to require `composer-components/{component-name}` within their application. It will require and expose the anugular module as well as requiring the built css.
 
 
@@ -22,7 +26,9 @@ __A bootstrap file__
 Importing Components into your Project
 -----------
 
-There are multiple ways to import all/individual components into your application.
+There are multiple ways to import all/individual components into your application. To begin install with:
+
+```jspm install composer-components=github:guardian/tools-components```
 
 __1,__ Give me all the things:
 
@@ -88,8 +94,9 @@ __Sass component__
 
 `gen new sass -m {mixin-name} -c {component-name}`
 
-This will generate a sass component within `sass/components/{component-name}.scss`
-AND a mixin within `sass/mixins/{component-name}/{mixin-name}.scss`
+This will generate:
+- A sass component within `sass/components/{component-name}.scss`
+- A mixin within `sass/mixins/{component-name}/{mixin-name}.scss`
 
 __Angular directive__
 
@@ -101,7 +108,7 @@ __Full component__
 
 `gen new component -c {component-name}`
 
-This will genearte:
+This will generate:
 
 - A mixin in `sass/mixins/{component-name}/{component-name}.scss`
 - A sass component in `sass/components/{component-name}.scss`
