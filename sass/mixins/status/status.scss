@@ -6,7 +6,7 @@
   border-radius: 25px;
   text-align: center;
 
-  &.alt {
+  &[skin=light] {
     color: $status-alt-color;
   }
 
