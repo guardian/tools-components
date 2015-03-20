@@ -9,7 +9,7 @@ let pReadFile   = Q.denodeify(fs.readFile);
 let pWriteFile  = Q.denodeify(fs.writeFile);
 let pMkdirP     = Q.denodeify(mkdirp);
 
-export default (componentName) => {
+export default (componentName, mixinName) => {
 
   return Q.async(function* (){
     try {
