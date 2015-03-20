@@ -20,7 +20,6 @@ program
   .version(pkgInfo.version)
   .option('-m, --mixin-name [mixin-name]', 'Mixin name')
   .option('-c, --component-name [component-name]', 'Component name')
-  .option('-d, --directive-name [directive-name]', 'Directive name')
   .parse(process.argv);
 
 if (commandType === 'new') {
