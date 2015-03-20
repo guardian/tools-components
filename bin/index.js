@@ -2,12 +2,13 @@
 require('babel/register');
 var program = require('commander');
 var pkgInfo = require('../package.json');
-var colors = require('colors');
+var colors  = require('colors');
 var capitalizeFirstChar = require('capitalize-first-char');
 
-var generateMixin = require('./lib/generate-mixin');
+var generateMixin         = require('./lib/generate-mixin');
 var generateSassComponent = require('./lib/generate-sass-component');
-var genrateDirective = require('./lib/generate-directive');
+var genrateDirective      = require('./lib/generate-directive');
+var generateBootstrap     = require('./lib/generate-bootstrap')
 
 //init CLI options
 
@@ -34,7 +35,14 @@ if (commandType === 'new') {
   }
   //generates a new directive
   else if (componentType === 'directive') {
-    genrateDirective(program.componentName, program.directiveName);
+    genrateDirective(program.componentName);
+  }
+  //genrate a new component
+  else if (componentType === 'component') {
+    generateBootstrap(program.componentName);
+  }
+  else {
+    console.log('You must specify a valid component type'.red);
   }
 }
 
