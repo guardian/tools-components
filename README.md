@@ -114,3 +114,36 @@ This will generate:
 - A sass component in `sass/components/{component-name}.scss`
 - An angular directive in `lib/{component-name}/index.js`
 - A bootstrap file (for single component importing) in `./{component-name}.js`
+
+Development patterns
+---------------------
+
+__Directives__
+
+Feel free to restrict directives as you wish. In general tags should be prioritised over attributes as this provides a clearer DSL, however directives can you both (see the box component as an example).
+
+Variations on components should be specified with a `variant={variant-name}` pattern. `gu-icons` are a good example of this pattern. These variations are usually restricted to behaviour or state. Visual differences in style should be communicated via a `skin={skin-type}` attribute.
+
+__CSS classes__
+
+A components class name usually follows this pattern:
+
+```css
+.{component-name}--{variant} {}
+```
+
+therefore we get:
+
+```css
+.box--primary {}
+.box--secondary {}
+.box--tertiary {}
+```
+
+If a component requires a subtle variation like a change of color you can use a skin attribute.  This allows styling like so:
+
+``` css
+.box--primart[skin=large] {}
+```
+
+Which allow many possible variations.
