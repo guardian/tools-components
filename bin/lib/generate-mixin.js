@@ -36,7 +36,8 @@ export default (mixinName, componentName) => {
       //compile template
       template = _.template(template);
       let fileData = template({
-        mixinName: mixinName
+        mixinName: mixinName,
+        componentName: componentName
       });
 
       yield pWriteFile(mixinFileName, fileData, 'utf8');
