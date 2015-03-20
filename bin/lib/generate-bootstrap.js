@@ -4,7 +4,7 @@ import fs   from 'fs';
 import _    from 'lodash';
 
 var pReadFile  = Q.denodeify(fs.readFile);
-var pWriteFile = Q.denodeify(fs.pWriteFile)
+var pWriteFile = Q.denodeify(fs.writeFile)
 
 module.exports = (componentName) => {
   return Q.async(function* (){
