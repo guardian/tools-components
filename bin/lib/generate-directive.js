@@ -5,9 +5,9 @@ import mkdirp from 'mkdirp';
 import _      from 'lodash';
 import capitalizeFirstChar from 'capitalize-first-char';
 
-var pMkdirP    = Q.denodeify(mkdirp);
-var pReadFile  = Q.denodeify(fs.readFile);
-var pWriteFile = Q.denodeify(fs.writeFile);
+let pMkdirP    = Q.denodeify(mkdirp);
+let pReadFile  = Q.denodeify(fs.readFile);
+let pWriteFile = Q.denodeify(fs.writeFile);
 
 module.exports = (componentName, directiveName) => {
   return Q.async(function* (){
@@ -15,7 +15,7 @@ module.exports = (componentName, directiveName) => {
 
       console.log(`Generating lib/${componentName}/index.js`.green);
 
-      var directiveDirPath = path.resolve(__dirname, `../../lib/${componentName}`);
+      let directiveDirPath = path.resolve(__dirname, `../../lib/${componentName}`);
 
       //check if we already have a component
       if (fs.existsSync(directiveDirPath)) {
@@ -27,9 +27,9 @@ module.exports = (componentName, directiveName) => {
       yield pMkdirP(directiveDirPath);
 
       //get the template
-      var templateFilePath = path.resolve(__dirname, '../templates/directive.tmpl');
-      var templateData = yield pReadFile(templateFilePath, 'utf8');
-      var template = _.template(templateData);
+      let templateFilePath = path.resolve(__dirname, '../templates/directive.tmpl');
+      let templateData = yield pReadFile(templateFilePath, 'utf8');
+      let template = _.template(templateData);
       //render the template
       template = template({
         componentName: componentName,
@@ -37,7 +37,7 @@ module.exports = (componentName, directiveName) => {
       });
 
 
-      var directiveFilePath = path.resolve(directiveDirPath, 'index.js');
+      let directiveFilePath = path.resolve(directiveDirPath, 'index.js');
       yield pWriteFile(directiveFilePath, template, 'utf8');
 
       console.log(`${directiveFilePath} created`.green);

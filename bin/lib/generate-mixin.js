@@ -31,11 +31,11 @@ export default (mixinName, componentName) => {
       }
 
       //get the file template
-      var templatePath = path.resolve(__dirname, '../templates/mixin.tmpl');
+      let templatePath = path.resolve(__dirname, '../templates/mixin.tmpl');
       let template = yield pReadFile(templatePath, 'utf8');
       //compile template
       template = _.template(template);
-      var fileData = template({
+      let fileData = template({
         mixinName: mixinName
       });
 

@@ -25,12 +25,12 @@ export default (componentName, mixinName) => {
       }
 
       //get the template
-      var templatePath = path.resolve(__dirname, '../templates/sass-component.tmpl');
+      let templatePath = path.resolve(__dirname, '../templates/sass-component.tmpl');
       let template = yield pReadFile(templatePath, 'utf8');
 
       //get the file template
       template = _.template(template);
-      var fileData = template({
+      let fileData = template({
         mixinName: mixinName,
         componentName: componentName
       });
