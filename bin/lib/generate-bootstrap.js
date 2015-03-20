@@ -9,6 +9,10 @@ var pWriteFile = Q.denodeify(fs.writeFile)
 module.exports = (componentName) => {
   return Q.async(function* (){
 
+    try{
+
+    console.log(`Generating ./${componentName}.js`.green);
+
     var bootstrapFilePath = path.resolve(__dirname, `../../${componentName}.js`);
 
     if (fs.existsSync(bootstrapFilePath)) {
@@ -27,6 +31,13 @@ module.exports = (componentName) => {
     yield pWriteFile(bootstrapOutputFilePath, template, 'utf8');
     console.log(`${bootstrapFilePath} created`.green);
 
+    }
+    catch (e) {
+      console.log('-----------------------');
+      console.log(e);
+      console.log('-----------------------');
+      process.exit(1);
+    }
 
   })().done();
 }
