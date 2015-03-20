@@ -27,6 +27,7 @@
     "npm": "^2.7.1"
   },
   "devDependencies": {
+    "autoprefixer": "^5.1.0",
     "babel": "^4.7.8",
     "commander": "^2.6.0",
     "glob": "^5.0.2",
