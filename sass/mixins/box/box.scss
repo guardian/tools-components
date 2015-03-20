@@ -3,6 +3,11 @@
 @import "typography.scss";
 
 @mixin box($type) {
+
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+
   @if $type == 'primary' {
     background-color: white;
   }
@@ -11,5 +16,9 @@
   }
   @else if $type == 'tertiary' {
     background-color: $color-300-grey;
+  }
+
+  &[skin=large] {
+    padding: 7px 15px;
   }
 }

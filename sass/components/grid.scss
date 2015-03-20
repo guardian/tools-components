@@ -7,6 +7,7 @@
 
 @for $i from 1 through $num-of-columns {
   .col-#{$i}{
+    box-sizing: border-box;
     @include column($i);
   }
 }
