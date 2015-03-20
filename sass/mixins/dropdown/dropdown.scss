@@ -3,5 +3,8 @@
 @import "typography.scss";
 
 @mixin dropdown() {
-  //your code goes here
+  //this is horribly coupled bah!!
+  &.closed .dropdown__item {
+    display: none;
+  }
 }
