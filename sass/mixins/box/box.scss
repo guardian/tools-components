@@ -1,0 +1,15 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@mixin box($type) {
+  @if $type == 'primary' {
+    background-color: white;
+  }
+  @else if $type == 'secondary' {
+    background-color: $color-150-grey;
+  }
+  @else if $type == 'tertiary' {
+    background-color: $color-300-grey;
+  }
+}
