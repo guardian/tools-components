@@ -1,13 +1,15 @@
 @import "palette.scss";
+@import "skins/light.scss";
 
 @mixin status($type) {
-  display: inline-block;
-  padding: 7px 10px;
-  border-radius: 25px;
-  text-align: center;
+
+  display       : inline-block;
+  padding       : 7px 10px;
+  border-radius : 25px;
+  text-align    : center;
 
   &[skin=light] {
-    color: $status-alt-color;
+    color: $_light-status-alt-color;
   }
 
   @if $type == 'default' {

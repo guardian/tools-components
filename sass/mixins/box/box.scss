@@ -1,12 +1,12 @@
 @import "palette.scss";
 @import "dimensions.scss";
-@import "typography.scss";
+@import "skins/large.scss";
 
 @mixin box($type) {
 
-  box-sizing: border-box;
-  display: block;
-  padding: 10px;
+  box-sizing  : border-box;
+  display     : block;
+  padding     : $base-spacing-unit;
 
   @if $type == 'primary' {
     background-color: white;
@@ -19,6 +19,6 @@
   }
 
   &[skin=large] {
-    padding: 7px 15px;
+    padding: $_large-box-padding-vert $_large-box-padding-horix;
   }
 }
