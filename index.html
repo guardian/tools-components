@@ -1,9 +1,9 @@
-<!doctype html>
+<!docvariant html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Composer Components</title>
-  <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" variant="text/css" href="node_modules/normalize.css/normalize.css">
   <style>
     body {
       padding: 10px;
@@ -22,13 +22,13 @@
       Sidebar
     </gu-column>
     <gu-column span="10">
-      <gu-icon type="clock-active"></gu-icon>
-      <gu-icon type="clock-disabled"></gu-icon>
-      <gu-icon type="info-active"></gu-icon>
-      <gu-icon type="info-disabled"></gu-icon>
-      <gu-icon type="publish-active"></gu-icon>
-      <gu-icon type="publish-disabled"></gu-icon>
-      <gu-icon type="preview-active"></gu-icon>
+      <gu-icon variant="clock-active"></gu-icon>
+      <gu-icon variant="clock-disabled"></gu-icon>
+      <gu-icon variant="info-active"></gu-icon>
+      <gu-icon variant="info-disabled"></gu-icon>
+      <gu-icon variant="publish-active"></gu-icon>
+      <gu-icon variant="publish-disabled"></gu-icon>
+      <gu-icon variant="preview-active"></gu-icon>
 
       <h2>Buttons</h2>
 
@@ -90,6 +90,20 @@
         </gu-column>
         <gu-column span="4" gu-box="tertiary" skin="large">
           This is even more
+        </gu-column>
+      </gu-row>
+
+      <h2>Dropdowns</h2>
+      <gu-row>
+        <gu-column span="4">
+
+          <gu-dropdown>
+            <gu-dropdown-trigger>click me</gu-dropdown-trigger>
+            <gu-dropdown-item>Item 1</gu-dropdown-item>
+            <gu-dropdown-item>Item 1</gu-dropdown-item>
+            <gu-dropdown-item>Item 1</gu-dropdown-item>
+          </gu-dropdown>
+
         </gu-column>
       </gu-row>
 

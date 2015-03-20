@@ -1,5 +1,15 @@
 @import "mixins/dropdown/dropdown.scss";
+@import "mixins/dropdown/dropdown__item.scss";
+@import "mixins/dropdown/dropdown__trigger.scss";
 
 .dropdown {
   @include dropdown();
+}
+
+.dropdown__item {
+  @include dropdown__item();
+}
+
+.dropdown__trigger {
+  @include dropdown__trigger();
 }
