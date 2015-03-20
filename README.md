@@ -79,7 +79,7 @@ To setup file generators you must:
 After which you will have `gen` available on your path
 
 __Mixin__
-`gen -m {mixin-name} -c {component-name}`
+`gen new mixin -m {mixin-name} -c {component-name}`
 
 This will generate a mixin within `sass/mixin/{component-name}/{mixin-name}.scss`
 
