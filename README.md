@@ -120,7 +120,7 @@ Development patterns
 
 __Directives__
 
-Feel free to restrict directives as you wish. In general tags should be prioritised over attributes as this provides a clearer DSL, however directives can use both (see the box component as an example).
+If a directive contains specific behaviour limit to an element. In general attribute directives should be used ONLY to assign specific classes to a given element.
 
 Variations on components should be specified with a `variant={variant-name}` pattern. `gu-icons` are a good example of this pattern. These variations are usually restricted to behaviour or state. Visual differences in style should be communicated via a `skin={skin-type}` attribute.
 
