@@ -1,0 +1,24 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "skins/large.scss";
+
+@mixin box($type) {
+
+  box-sizing  : border-box;
+  display     : block;
+  padding     : $base-spacing-unit;
+
+  @if $type == 'primary' {
+    background-color: white;
+  }
+  @else if $type == 'secondary' {
+    background-color: $color-150-grey;
+  }
+  @else if $type == 'tertiary' {
+    background-color: $color-300-grey;
+  }
+
+  &[skin=large] {
+    padding: $_large-box-padding-vert $_large-box-padding-horix;
+  }
+}

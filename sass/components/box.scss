@@ -1,0 +1,14 @@
+@import "mixins/box/box.scss";
+
+.box--primary {
+  @include box("primary");
+}
+
+.box--secondary {
+  @include box("secondary");
+}
+
+.box--tertiary {
+  @include box("tertiary");
+}
+

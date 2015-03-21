@@ -40,7 +40,7 @@ if (commandType === 'new') {
   //genrate a new component
   else if (componentType === 'component') {
     generateMixin(program.componentName, program.componentName);
-    generateSassComponent(program.componentName);
+    generateSassComponent(program.componentName, program.componentName);
     genrateDirective(program.componentName);
     generateBootstrap(program.componentName);
   }

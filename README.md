@@ -26,7 +26,7 @@ __A bootstrap file.__
 Importing Components into your Project
 -----------
 
-There are multiple ways to import all/individual components into your application. To begin install with:
+There are multiple ways to import all/individual components into your application. To begin, install with:
 
 ```jspm install composer-components=github:guardian/tools-components```
 
@@ -114,3 +114,40 @@ This will generate:
 - A sass component in `sass/components/{component-name}.scss`
 - An angular directive in `lib/{component-name}/index.js`
 - A bootstrap file (for single component importing) in `./{component-name}.js`
+
+Development patterns
+---------------------
+
+__Directives__
+
+If a directive contains specific behaviour limit to an element. In general attribute directives should be used ONLY to assign specific classes to a given element.
+
+Variations on components should be specified with a `variant={variant-name}` pattern. `gu-icons` are a good example of this pattern. These variations are usually restricted to behaviour or state. Visual differences in style should be communicated via a `skin={skin-type}` attribute.
+
+__CSS classes__
+
+A components class name usually follows this pattern:
+
+```css
+.{component-name}--{variant} {}
+```
+
+therefore we get:
+
+```css
+.box--primary {}
+.box--secondary {}
+.box--tertiary {}
+```
+
+If a component requires a subtle variation like a change of color you can use a skin attribute.  This allows styling like so:
+
+``` css
+.box--primary[skin="large"] {}
+.box--primary[skin="large,light"] {}
+```
+
+Which allow many possible variations.
+
+__Skins__
+All skin specific variables are kept in `sass/skins/{skin-name}.scss`. Skins can apply to many components. All skin variables should be prefixed with `$_{skin-name}-{component-name}-{variable-name}`.
