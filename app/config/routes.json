@@ -1,0 +1,7 @@
+{
+  "icons": {
+    "slug": "/icons",
+    "ctrl": "IconsCtrl",
+    "template": "app/templates/icons.html"
+  }
+}
