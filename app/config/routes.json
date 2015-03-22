@@ -8,5 +8,10 @@
     "slug": "/components/boxes",
     "ctrl": "BoxCtrl",
     "template": "app/templates/box.html"
+  },
+  {
+    "slug": "/components/buttons",
+    "ctrl": "BtnCtrl",
+    "template": "app/templates/btn.html"
   }
 ]
