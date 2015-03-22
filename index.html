@@ -35,7 +35,14 @@
   </gu-row>
   <gu-row class="content">
     <gu-column class="sidebar" span="2" gu-box="tertiary">
-      <a href='#/components/icons'>Icons</a>
+      <ul>
+        <li>
+          <a href='#/components/icons'>Icons</a>
+        </li>
+        <li>
+          <a href='#/components/boxes'>Boxes</a>
+        </li>
+      </ul>
     </gu-column>
     <gu-column span="10" class="container">
       <div ng-view>Loading</div>
@@ -102,9 +109,11 @@
 
       <gu-row>
         <gu-column span="4">
+
           <gu-box variant="primary" skin="large">
             This is some content
           </gu-box>
+
         </gu-column>
         <gu-column span="4" gu-box="secondary" skin="large">
           This is some more

@@ -7,6 +7,7 @@ import routeData  from './config/routes.json!';
 
 //controllers
 import IconsCtrlMod   from './controllers/IconsCtrl';
+import BoxCtrlMod   from './controllers/BoxCtrl';
 
 //app
 import components from '../lib/gu-components';
@@ -17,6 +18,7 @@ var app = angular.module('gu-components-app', [
   'guComponents',
   'appDirectives',
   'IconsCtrlMod',
+  'BoxCtrlMod',
 ]);
 
 app.config(['$routeProvider', function($routeProvider){
