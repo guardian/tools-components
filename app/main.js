@@ -10,6 +10,7 @@ import IconsCtrlMod   from './controllers/IconsCtrl';
 import BoxCtrlMod     from './controllers/BoxCtrl';
 import BtnCtrlMod     from './controllers/BtnCtrl';
 import GridCtrlMod    from './controllers/GridCtrl';
+import StatusCtrlMod  from './controllers/StatusCtrl';
 
 //app
 import components from '../lib/gu-components';
@@ -23,6 +24,7 @@ var app = angular.module('gu-components-app', [
   'BoxCtrlMod',
   'BtnCtrlMod',
   'GridCtrlMod',
+  'StatusCtrlMod',
 ]);
 
 app.config(['$routeProvider', function($routeProvider){

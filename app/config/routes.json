@@ -18,5 +18,10 @@
     "slug": "/components/grid",
     "ctrl": "GridCtrl",
     "template": "app/templates/grid.html"
+  },
+  {
+    "slug": "/components/status",
+    "ctrl": "StatusCtrl",
+    "template": "app/templates/status.html"
   }
 ]
