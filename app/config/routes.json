@@ -1,7 +1,7 @@
-{
-  "icons": {
-    "slug": "/icons",
+[
+  {
+    "slug": "/components/icons",
     "ctrl": "IconsCtrl",
     "template": "app/templates/icons.html"
   }
-}
+]

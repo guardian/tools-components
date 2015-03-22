@@ -21,10 +21,12 @@ var app = angular.module('gu-components-app', [
 
 app.config(['$routeProvider', function($routeProvider){
 
-  $routeProvider.when('/icons', {
-    templateUrl: 'app/templates/icons.html',
-    controller: 'IconsCtrl'
-  });
+  routeData.forEach((data)=>{
+    $routeProvider.when(data.slug, {
+      templateUrl: data.template,
+      controller: data.ctrl
+    })
+  })
 
   $routeProvider.otherwise({
     redirectTo: '/'
