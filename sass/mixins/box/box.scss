@@ -1,6 +1,8 @@
 @import "palette.scss";
 @import "dimensions.scss";
-@import "skins/large.scss";
+
+$_large-box-padding-horix : $large-spacing-unit;
+$_large-box-padding-vert  : 7px;
 
 @mixin box($type) {
 
