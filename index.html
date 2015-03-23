@@ -19,6 +19,9 @@
     .container {
       overflow: auto;
     }
+    .composer-icon object {
+      width: 20px;
+    }
   </style>
 
 </head>
@@ -26,11 +29,11 @@
 <main ng-app="gu-components-app">
 
   <gu-row>
-    <gu-column span="4" gu-box="secondary" skin="large">
-      Icon
+    <gu-column class="composer-icon" span="4" gu-box="secondary" size="large">
+      <gu-icon variant="composer-icon"></gu-icon>
     </gu-column>
 
-    <gu-column span="8" gu-box="secondary" skin="large">
+    <gu-column span="8" gu-box="secondary" size="large">
       Main section
     </gu-column>
   </gu-row>
