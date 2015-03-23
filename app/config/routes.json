@@ -23,5 +23,10 @@
     "slug": "/components/status",
     "ctrl": "StatusCtrl",
     "template": "app/templates/status.html"
+  },
+  {
+    "slug": "/components/dropdowns",
+    "ctrl": "DropdownCtrl",
+    "template": "app/templates/dropdown.html"
   }
 ]
