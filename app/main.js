@@ -6,11 +6,12 @@ import router     from 'angular-route/angular-route';
 import routeData  from './config/routes.json!';
 
 //controllers
-import IconsCtrlMod   from './controllers/IconsCtrl';
-import BoxCtrlMod     from './controllers/BoxCtrl';
-import BtnCtrlMod     from './controllers/BtnCtrl';
-import GridCtrlMod    from './controllers/GridCtrl';
-import StatusCtrlMod  from './controllers/StatusCtrl';
+import IconsCtrlMod     from './controllers/IconsCtrl';
+import BoxCtrlMod       from './controllers/BoxCtrl';
+import BtnCtrlMod       from './controllers/BtnCtrl';
+import GridCtrlMod      from './controllers/GridCtrl';
+import StatusCtrlMod    from './controllers/StatusCtrl';
+import DropdownCtrlMod  from './controllers/DropdownCtrl';
 
 //app
 import components from '../lib/gu-components';
@@ -25,6 +26,7 @@ var app = angular.module('gu-components-app', [
   'BtnCtrlMod',
   'GridCtrlMod',
   'StatusCtrlMod',
+  'DropdownCtrlMod'
 ]);
 
 app.config(['$routeProvider', function($routeProvider){

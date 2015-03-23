@@ -13,6 +13,9 @@
     html, body, main, .content, .sidebar, .container {
       height: 100%;
     }
+    body {
+      overflow: hidden;
+    }
     .container {
       overflow: auto;
     }
@@ -23,16 +26,15 @@
 <main ng-app="gu-components-app">
 
   <gu-row>
-
-  <gu-column span="4" gu-box="secondary" skin="large">
+    <gu-column span="4" gu-box="secondary" skin="large">
       Icon
     </gu-column>
 
     <gu-column span="8" gu-box="secondary" skin="large">
       Main section
     </gu-column>
-
   </gu-row>
+
   <gu-row class="content">
     <gu-column class="sidebar" span="2" gu-box="tertiary">
       <ul>
@@ -41,6 +43,7 @@
         <li><a href="#/components/buttons">Buttons</a></li>
         <li><a href="#/components/grid">Grid</a></li>
         <li><a href="#/components/status">Status</a></li>
+        <li><a href="#/components/dropdowns">Dropdown</a></li>
       </ul>
     </gu-column>
     <gu-column span="10" class="container">

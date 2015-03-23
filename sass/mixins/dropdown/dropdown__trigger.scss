@@ -1,0 +1,15 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@mixin dropdown__trigger() {
+  margin-bottom: $small-spacing-unit;
+
+  & object {
+    width: 15px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
