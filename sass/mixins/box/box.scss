@@ -18,7 +18,7 @@
     background-color: $color-300-grey;
   }
 
-  &[skin=large] {
+  &[size=large] {
     padding: $_large-box-padding-vert $_large-box-padding-horix;
   }
 }
