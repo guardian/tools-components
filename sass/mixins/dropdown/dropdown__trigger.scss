@@ -3,7 +3,9 @@
 @import "typography.scss";
 
 @mixin dropdown__trigger() {
+
   margin-bottom: $small-spacing-unit;
+  user-select: none;
 
   & object {
     width: 15px;

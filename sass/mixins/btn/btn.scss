@@ -36,6 +36,7 @@ $button-color: white;
   line-height: 1;
   color: $button-color;
   text-align: center;
+  user-select: none;
 
   &:focus {
     outline: 1px solid white;
