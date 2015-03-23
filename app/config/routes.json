@@ -1,32 +1,26 @@
 [
   {
     "slug": "/components/icons",
-    "ctrl": "IconsCtrl",
     "template": "app/templates/icons.html"
   },
   {
     "slug": "/components/boxes",
-    "ctrl": "BoxCtrl",
     "template": "app/templates/box.html"
   },
   {
     "slug": "/components/buttons",
-    "ctrl": "BtnCtrl",
     "template": "app/templates/btn.html"
   },
   {
     "slug": "/components/grid",
-    "ctrl": "GridCtrl",
     "template": "app/templates/grid.html"
   },
   {
     "slug": "/components/status",
-    "ctrl": "StatusCtrl",
     "template": "app/templates/status.html"
   },
   {
     "slug": "/components/dropdowns",
-    "ctrl": "DropdownCtrl",
     "template": "app/templates/dropdown.html"
   }
 ]
