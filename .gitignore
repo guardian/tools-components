@@ -3,3 +3,4 @@ jspm_packages/*
 .DS_Store
 *.log
 styles/*
+build/*
