@@ -76,7 +76,7 @@ export default (releaseType) => {
       yield pWriteFile(ignoreFilePath, ignoreFileData, 'utf8');
 
       console.log(`- Commiting built files`.green);
-      yield spawn('git', ['add', '--update', '.']).progress(printProgress);
+      yield spawn('git', ['add', '--all', '.']).progress(printProgress);
       yield spawn('git', ['commit', '--message', 'Update dist files']).progress(printProgress);
 
       console.log('- Bumping version number'.green);
