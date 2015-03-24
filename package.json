@@ -1,7 +1,6 @@
 {
-  "name": "composer-components",
+  "name": "tools-components",
   "version": "1.0.0",
-  "private": true,
   "description": "Reusable UI Components for Composer",
   "main": "lib/gu-components",
   "scripts": {
