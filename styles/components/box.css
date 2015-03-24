@@ -1,0 +1,23 @@
+.box--primary {
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+  background-color: white; }
+  .box--primary[size=large] {
+    padding: 7px 15px; }
+
+.box--secondary {
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+  background-color: #F1F1F1; }
+  .box--secondary[size=large] {
+    padding: 7px 15px; }
+
+.box--tertiary {
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+  background-color: #DCDCDC; }
+  .box--tertiary[size=large] {
+    padding: 7px 15px; }
