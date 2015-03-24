@@ -72,7 +72,7 @@ export default (releaseType) => {
       console.log('- Removing built files from ignore list'.green);
       let ignoreFileData = yield pReadFile(ignoreFilePath, 'utf8');
       //remove the ignored style folder
-      ignoreFileData = ignoreFileData.replace(/styles\/\*/, '');
+      ignoreFileData = ignoreFileData.replace(/^styles\/\*$/g, '');
       yield pWriteFile(ignoreFilePath, ignoreFileData, 'utf8');
 
       console.log(`- Commiting built files`.green);
