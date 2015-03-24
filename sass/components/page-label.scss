@@ -1,0 +1,5 @@
+@import "mixins/page-label/page-label.scss";
+
+.page-label {
+  @include page-label();
+}
