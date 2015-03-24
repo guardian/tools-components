@@ -1,0 +1,5 @@
+@import "mixins/hover-button/hover-button.scss";
+
+.hover-button {
+  @include hover-button();
+}
