@@ -7,11 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-sass": "./bin/build-sass-cli",
-    "bundle-sass": "npm run build-sass && cat styles/**/*.css > build/gu-components.css",
     "watch-sass": "wr ./bin/build-sass-cli ./sass/**/*.scss",
     "postinstall": "jspm install -y && npm run build-sass",
     "watch": "http-server & npm run watch-sass",
-    "build": "npm run bundle-sass"
+    "build": "npm run build-sass"
   },
   "bin": {
     "gen": "bin/index"
