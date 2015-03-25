@@ -3,5 +3,20 @@
 @import "typography.scss";
 
 @mixin page-label__hover() {
-  //your code goes here
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: black;
+  color: white;
+
+  transition: top .1s ease-in-out;
+  cursor: pointer;
+
+  .open & {
+    top: 0;
+  }
 }

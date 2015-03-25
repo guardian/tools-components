@@ -4,5 +4,7 @@
 
 @mixin page-label() {
   //your code goes here
+  position: relative;
+  overflow: hidden;
   color: black;
 }
