@@ -29,17 +29,36 @@
 <main ng-app="gu-components-app">
 
   <gu-row>
-    <gu-column class="composer-icon" span="4" gu-box="secondary" size="large">
-      <gu-icon variant="composer-icon"></gu-icon>
+
+    <gu-column class="composer-icon" span="2" size="large">
+
+      <gu-row>
+
+        <gu-column span="2" gu-box="tertiary">
+          <gu-icon variant="composer-icon"></gu-icon>
+        </gu-column>
+
+        <gu-column span="10" flex>
+
+          <gu-page-label>
+            This is some content
+            <gu-page-label-hover>
+              <a href="#">Home</a>
+            </gu-page-label-hover>
+          </gu-page-label>
+
+        </gu-column>
+      </gu-row>
+
     </gu-column>
 
-    <gu-column span="8" gu-box="secondary" size="large">
+    <gu-column span="10" gu-box="secondary" size="large">
       Main section
     </gu-column>
   </gu-row>
 
   <gu-row class="content">
-    <gu-column class="sidebar" span="2" gu-box="tertiary">
+    <gu-column class="sidebar" span="2" gu-box="secondary">
       <ul>
         <li><a href="#/components/icons">Icons</a></li>
         <li><a href="#/components/boxes">Boxes</a></li>

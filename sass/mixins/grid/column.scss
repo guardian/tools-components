@@ -5,4 +5,8 @@
   flex: 11;
   flex-basis: $width;
   max-width: $width;
+
+  &[flex] {
+    display: flex;
+  }
 }
