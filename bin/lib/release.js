@@ -1,7 +1,7 @@
 //good to have the ability to switch for debugging
 const STABLE_BRANCH       = 'master';
 const DIST_BRANCH         = 'dist';
-const OUTPUT_CSS_FILENAME = 'all.css'
+const OUTPUT_CSS_FILENAME = 'all.css';
 
 import Q        from  'q';
 import fs       from  'fs';
@@ -13,20 +13,21 @@ import mversion from 'mversion';
 
 let pReadFile   = Q.denodeify(fs.readFile);
 let pWriteFile  = Q.denodeify(fs.writeFile);
+let pUnlink     = Q.denodeify(fs.unlink);
 let pGlob       = Q.denodeify(glob);
 let pUpdate     = Q.denodeify(mversion.update);
 
 let printProgress = (childProcess)=> {
   childProcess.stdout.pipe(process.stdout);
   childProcess.stderr.pipe(process.stderr);
-}
+};
 
 let handleError = (err) => {
   console.log('-----------------------'.red);
   console.log(err);
   console.log('-----------------------'.red);
   process.exit(1);
-}
+};
 
 
 export default (releaseType) => {
@@ -56,6 +57,12 @@ export default (releaseType) => {
         throw new Error('No .gitignore file');
       }
 
+      let outputFile = path.resolve(__dirname, `../../styles/${OUTPUT_CSS_FILENAME}`);
+      if (fs.existsSync(outputFile)) {
+        console.log(`- Deleting output file ${outputFile}`.green);
+        yield pUnlink(outputFile);
+      }
+
       //get all css file data
       let cssFilePattern = path.resolve(__dirname, '../../styles/**/*.css');
       let cssFiles = yield pGlob(cssFilePattern);
@@ -65,7 +72,6 @@ export default (releaseType) => {
       cssData = cssData.reduce((last, current) => last += current, '');
 
       console.log('- Writing output css'.green);
-      let outputFile = path.resolve(__dirname, `../../styles/${OUTPUT_CSS_FILENAME}`);
       yield pWriteFile(outputFile, cssData, 'utf8');
 
 
@@ -101,5 +107,5 @@ export default (releaseType) => {
     }
 
   })().done();
-}
+};
 
