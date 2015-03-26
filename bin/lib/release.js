@@ -13,6 +13,7 @@ import mversion from 'mversion';
 
 let pReadFile   = Q.denodeify(fs.readFile);
 let pWriteFile  = Q.denodeify(fs.writeFile);
+let pUnlink     = Q.denodeify(fs.unlink);
 let pGlob       = Q.denodeify(glob);
 let pUpdate     = Q.denodeify(mversion.update);
 
@@ -56,11 +57,13 @@ export default (releaseType) => {
         throw new Error('No .gitignore file');
       }
 
+      let outputFile = path.resolve(__dirname, `../../styles/${OUTPUT_CSS_FILENAME}`);
+      console.log(`- Deleting output file ${outputFile}`.green);
+      yield pUnlink(outputFile);
+
       //get all css file data
       let cssFilePattern = path.resolve(__dirname, '../../styles/**/*.css');
-      let outputFile = path.resolve(__dirname, `../../styles/${OUTPUT_CSS_FILENAME}`);
       let cssFiles = yield pGlob(cssFilePattern);
-      cssFiles = cssFiles.filter((filePath)=> filePath !== outputFile);
       let cssData = yield Q.all(cssFiles.map((filePath)=> pReadFile(filePath, 'utf8')));
 
       //format it
