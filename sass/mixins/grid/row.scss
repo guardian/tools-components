@@ -7,5 +7,6 @@
 
   &[skin=header] {
     border: 1px solid $_header-row-border-color;
+    border-top: none;
   }
 }

@@ -24,7 +24,7 @@ $_large-box-padding-vert  : 7px;
       border-right: 1px solid $_header-row-border-color;
 
       &:last-child {
-        border-right: none;
+       // border-right: none;
       }
 
     }
