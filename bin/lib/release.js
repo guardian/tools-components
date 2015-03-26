@@ -1,7 +1,7 @@
 //good to have the ability to switch for debugging
 const STABLE_BRANCH       = 'master';
 const DIST_BRANCH         = 'dist';
-const OUTPUT_CSS_FILENAME = 'all.css'
+const OUTPUT_CSS_FILENAME = 'all.css';
 
 import Q        from  'q';
 import fs       from  'fs';
@@ -19,14 +19,14 @@ let pUpdate     = Q.denodeify(mversion.update);
 let printProgress = (childProcess)=> {
   childProcess.stdout.pipe(process.stdout);
   childProcess.stderr.pipe(process.stderr);
-}
+};
 
 let handleError = (err) => {
   console.log('-----------------------'.red);
   console.log(err);
   console.log('-----------------------'.red);
   process.exit(1);
-}
+};
 
 
 export default (releaseType) => {
@@ -58,14 +58,15 @@ export default (releaseType) => {
 
       //get all css file data
       let cssFilePattern = path.resolve(__dirname, '../../styles/**/*.css');
+      let outputFile = path.resolve(__dirname, `../../styles/${OUTPUT_CSS_FILENAME}`);
       let cssFiles = yield pGlob(cssFilePattern);
+      cssFiles = cssFiles.filter((filePath)=> filePath !== outputFile);
       let cssData = yield Q.all(cssFiles.map((filePath)=> pReadFile(filePath, 'utf8')));
 
       //format it
       cssData = cssData.reduce((last, current) => last += current, '');
 
       console.log('- Writing output css'.green);
-      let outputFile = path.resolve(__dirname, `../../styles/${OUTPUT_CSS_FILENAME}`);
       yield pWriteFile(outputFile, cssData, 'utf8');
 
 
@@ -101,5 +102,5 @@ export default (releaseType) => {
     }
 
   })().done();
-}
+};
 
