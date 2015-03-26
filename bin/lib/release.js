@@ -58,8 +58,10 @@ export default (releaseType) => {
       }
 
       let outputFile = path.resolve(__dirname, `../../styles/${OUTPUT_CSS_FILENAME}`);
-      console.log(`- Deleting output file ${outputFile}`.green);
-      yield pUnlink(outputFile);
+      if (fs.existsSync(outputFile)) {
+        console.log(`- Deleting output file ${outputFile}`.green);
+        yield pUnlink(outputFile);
+      }
 
       //get all css file data
       let cssFilePattern = path.resolve(__dirname, '../../styles/**/*.css');
