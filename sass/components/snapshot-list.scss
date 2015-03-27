@@ -1,0 +1,20 @@
+@import "mixins/snapshot-list/snapshot-list.scss";
+@import "mixins/snapshot-list/snapshot-list__header.scss";
+@import "mixins/snapshot-list/snapshot-list__decal.scss";
+@import "mixins/snapshot-list/snapshot-list__content.scss";
+
+.snapshot-list {
+  @include snapshot-list();
+}
+
+.snapshot-list__header {
+  @include snapshot-list__header;
+}
+
+.snapshot-list__header__decal {
+  @include snapshot-list__decal;
+}
+
+.snapshot-list__header__content {
+  @include snapshot-list__content;
+}

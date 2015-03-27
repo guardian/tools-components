@@ -1,0 +1,10 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@import "mixins/utils/pull-left";
+
+@mixin snapshot-list__decal() {
+  @include pull-left;
+  border-right: 1px solid $snapshot-list-header-border;
+}

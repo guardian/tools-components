@@ -26,5 +26,12 @@
   {
     "slug": "/components/page-label",
     "template": "app/templates/page-label.html"
+  },
+  {
+    "slug": "/components/snapshot-list",
+    "template": "app/templates/snapshot-list.html"
   }
+
+
+
 ]

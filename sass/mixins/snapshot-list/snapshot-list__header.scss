@@ -1,0 +1,15 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@import "mixins/utils/clearfix.scss";
+
+@mixin snapshot-list__header {
+  @include clearfix;
+  background-color: $snapshot-list-header-bg;
+
+  h4 {
+    padding: $small-spacing-unit $base-spacing-unit;
+    margin: 0;
+  }
+}
