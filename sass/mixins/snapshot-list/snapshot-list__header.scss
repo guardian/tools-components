@@ -3,13 +3,15 @@
 @import "typography.scss";
 
 @import "mixins/utils/clearfix.scss";
+@import "mixins/snapshot-list/snapshot-list__h4";
 
 @mixin snapshot-list__header {
+
   @include clearfix;
   background-color: $snapshot-list-header-bg;
+  text-transform: uppercase;
 
   h4 {
-    padding: $small-spacing-unit $base-spacing-unit;
-    margin: 0;
+    @include snapshot-list__h4;
   }
 }

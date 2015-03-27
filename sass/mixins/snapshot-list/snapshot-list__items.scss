@@ -1,0 +1,8 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@mixin snapshot-list__items() {
+  list-style: none;
+  padding-left: 0;
+}

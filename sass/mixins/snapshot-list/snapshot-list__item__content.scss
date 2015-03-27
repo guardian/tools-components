@@ -1,0 +1,9 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@mixin snapshot-list__item__content() {
+  margin-left: $snapshot-list-sidebar-width;
+  border-left: 1px solid $snapshot-list-header-border;
+  //your code goes here
+}

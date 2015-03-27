@@ -1,0 +1,23 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+@import "mixins/snapshot-list/snapshot-list__h4";
+
+@mixin snapshot-list__item {
+  background-color: $snapshot-list-item-bg;
+  color: $snapshot-list-item-color;
+  margin-bottom: $very-large-spacing-unit;
+  cursor: pointer;
+  &:hover {
+    background-color: $snapshot-list-itemi-hover-bg;
+    color: white;
+  }
+  h4 {
+    @include snapshot-list__h4;
+    padding-bottom: $small-spacing-unit / 2;
+  }
+  h6 {
+    @include snapshot-list__h4;
+    padding-top: $small-spacing-unit / 2;
+  }
+}
