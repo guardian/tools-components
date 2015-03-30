@@ -3,11 +3,11 @@
 @import "typography.scss";
 
 @mixin snapshot-list__item__content() {
-  float: left;
   padding: $snapshot-list-padding-vert 20px $snapshot-list-padding-vert $snapshot-list-padding-vert;
   border-left: 2px solid $snapshot-list-header-border;
 
   [active=true] & {
-    max-width: 210px;
+    flex-basis: 210px;
+    flex-grow: 1;
   }
 }

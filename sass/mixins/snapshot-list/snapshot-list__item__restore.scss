@@ -11,12 +11,19 @@ $arrow-size: 28px;
   @include snapshot-list__item__link;
 
   position: relative;
-  width: 28.4%;
+  flex-basis: 120px;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: center;
 
   color: $color-400-grey;
   text-decoration: none;
 
   transition: all $snapshot-list-transition;
+
+  & gu-icon {
+    margin-right: $small-spacing-unit;
+  }
 
   &:hover {
     background-color: $snapshot-list-active-item-hover;

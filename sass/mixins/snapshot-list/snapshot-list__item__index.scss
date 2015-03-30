@@ -4,7 +4,6 @@
 @import "mixins/utils/pull-left";
 @mixin snapshot-list__item__index() {
   //your code goes here
-  @include pull-left;
-  width: $snapshot-list-sidebar-width;
+  min-width: $snapshot-list-sidebar-width;
   padding: $snapshot-list-padding-vert 0;
 }

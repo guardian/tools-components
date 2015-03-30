@@ -5,8 +5,8 @@
 @import "mixins/utils/clearfix";
 
 @mixin snapshot-list__item {
-  @include clearfix;
-
+  display: flex;
+  max-height: 55px;
   margin-bottom: $very-large-spacing-unit;
 
   background-color: $snapshot-list-item-bg;
