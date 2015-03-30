@@ -31,8 +31,10 @@ $status-error     : $warning;
 $status-complete  : $complete;
 $status-active    : $active;
 
-$snapshot-list-header-bg: $box-tertiary-bg;
-$snapshot-list-header-border: $color-400-grey;
-$snapshot-list-item-color: $color-650-grey;
-$snapshot-list-item-bg: white;
-$snapshot-list-item-hover-bg: $color-500-grey;
+$snapshot-list-header-bg          : $box-tertiary-bg;
+$snapshot-list-header-border      : $color-400-grey;
+$snapshot-list-item-color         : $color-650-grey;
+$snapshot-list-item-bg            : white;
+$snapshot-list-item-hover-bg      : $color-500-grey;
+$snapshot-list-active-item-hover  : $color-650-grey;
+$snapshot-list-transition         : .1s ease-in-out;

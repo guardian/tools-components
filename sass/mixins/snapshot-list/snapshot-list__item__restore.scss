@@ -4,7 +4,43 @@
 
 @import "mixins/snapshot-list/snapshot-list__item__link";
 
+$arrow-size: 28px;
 
-@mixin snapshot-list__item__restore() {
+@mixin snapshot-list__item__restore {
+
   @include snapshot-list__item__link;
+
+  position: relative;
+  width: 28.4%;
+
+  color: $color-400-grey;
+  text-decoration: none;
+
+  transition: all $snapshot-list-transition;
+
+  &:hover {
+    background-color: $snapshot-list-active-item-hover;
+    color: white;
+
+    [active] &:after {
+      border-left-color: $snapshot-list-active-item-hover;
+    }
+  }
+
+  [active] & {
+    &:after {
+      content: ' ';
+      display: inline-block;
+
+      position: absolute;
+      top: 0;
+      right: -$arrow-size;
+
+      border-top: $arrow-size solid transparent;
+      border-bottom: $arrow-size solid transparent;
+      border-left: $arrow-size solid $snapshot-list-item-hover-bg;
+
+      transition: all $snapshot-list-transition;
+    }
+  }
 }

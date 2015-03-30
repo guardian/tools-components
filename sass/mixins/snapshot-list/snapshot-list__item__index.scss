@@ -6,4 +6,5 @@
   //your code goes here
   @include pull-left;
   width: $snapshot-list-sidebar-width;
+  padding: $snapshot-list-padding-vert 0;
 }
