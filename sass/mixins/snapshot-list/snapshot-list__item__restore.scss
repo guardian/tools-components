@@ -1,0 +1,10 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@import "mixins/snapshot-list/snapshot-list__item__link";
+
+
+@mixin snapshot-list__item__restore() {
+  @include snapshot-list__item__link;
+}

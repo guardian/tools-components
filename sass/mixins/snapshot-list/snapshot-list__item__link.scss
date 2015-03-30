@@ -1,0 +1,17 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@import "mixins/utils/pull-left";
+
+
+@mixin snapshot-list__item__link() {
+  @include pull-left;
+  box-sizing: border-box;
+  border-left: 1px solid white;
+  padding: 10px 15px;
+
+
+  text-align: center;
+  line-height: 1.6;
+}

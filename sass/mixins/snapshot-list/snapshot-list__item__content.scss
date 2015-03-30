@@ -3,7 +3,11 @@
 @import "typography.scss";
 
 @mixin snapshot-list__item__content() {
-  margin-left: $snapshot-list-sidebar-width;
-  border-left: 1px solid $snapshot-list-header-border;
-  //your code goes here
+  float: left;
+  padding: $snapshot-list-padding-vert 20px $snapshot-list-padding-vert $snapshot-list-padding-vert;
+  border-left: 2px solid $snapshot-list-header-border;
+
+  [active=true] & {
+    max-width: 210px;
+  }
 }

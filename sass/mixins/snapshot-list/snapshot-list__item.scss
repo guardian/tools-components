@@ -2,19 +2,27 @@
 @import "dimensions.scss";
 @import "typography.scss";
 @import "mixins/snapshot-list/snapshot-list__h4";
+@import "mixins/utils/clearfix";
 
 @mixin snapshot-list__item {
+  @include clearfix;
+
+  margin-bottom: $very-large-spacing-unit;
+
   background-color: $snapshot-list-item-bg;
   color: $snapshot-list-item-color;
-  margin-bottom: $very-large-spacing-unit;
+
   cursor: pointer;
+
+  transition: all .1s ease-in-out;
+
   &:hover {
-    background-color: $snapshot-list-itemi-hover-bg;
+    background-color: $snapshot-list-item-hover-bg;
     color: white;
   }
   h4 {
     @include snapshot-list__h4;
-    padding-bottom: $small-spacing-unit / 2;
+    padding-bottom: $small-spacing-unit / 2
   }
   h6 {
     @include snapshot-list__h4;

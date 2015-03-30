@@ -15,6 +15,8 @@ System.config({
     "js-beautify": "npm:js-beautify@1.5.5",
     "json": "github:systemjs/plugin-json@0.1.0",
     "svg": "github:cutandpastey/plugin-svg@0.2.0",
+    "systemjs/plugin-text": "github:systemjs/plugin-text@0.0.2",
+    "text": "github:systemjs/plugin-text@0.0.2",
     "github:angular/bower-angular-route@1.3.15": {
       "angular": "github:angular/bower-angular@1.3.15"
     },

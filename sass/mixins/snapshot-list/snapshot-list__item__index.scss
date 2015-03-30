@@ -5,4 +5,5 @@
 @mixin snapshot-list__item__index() {
   //your code goes here
   @include pull-left;
+  width: $snapshot-list-sidebar-width;
 }

@@ -1,0 +1,24 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@import "mixins/snapshot-list/snapshot-list__item.scss";
+
+$arrow-size: 23px;
+
+@mixin snapshot-list__item--active {
+  @include snapshot-list__item;
+  position: relative;
+  background-color: $snapshot-list-item-hover-bg;
+  color: white;
+  &:before {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -$arrow-size;
+    border-top: $arrow-size solid transparent;
+    border-bottom: $arrow-size solid transparent;
+    border-left: $arrow-size solid $snapshot-list-item-hover-bg;
+  }
+}
