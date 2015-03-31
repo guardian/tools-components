@@ -14,6 +14,8 @@ System.config({
     "cutandpastey/plugin-svg": "github:cutandpastey/plugin-svg@0.2.0",
     "js-beautify": "npm:js-beautify@1.5.5",
     "json": "github:systemjs/plugin-json@0.1.0",
+    "moment": "github:moment/moment@2.9.0",
+    "moment/moment": "github:moment/moment@2.9.0",
     "svg": "github:cutandpastey/plugin-svg@0.2.0",
     "systemjs/plugin-text": "github:systemjs/plugin-text@0.0.2",
     "text": "github:systemjs/plugin-text@0.0.2",
