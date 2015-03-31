@@ -1,0 +1,13 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@mixin snapshot-list__item__content() {
+  padding: $snapshot-list-padding-vert 20px $snapshot-list-padding-vert $snapshot-list-padding-vert;
+  border-left: 2px solid $snapshot-list-header-border;
+
+  [active=true] & {
+    flex-basis: 210px;
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,30 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+@import "mixins/snapshot-list/snapshot-list__h4";
+@import "mixins/utils/clearfix";
+
+@mixin snapshot-list__item {
+  display: flex;
+  max-height: 55px;
+
+  background-color: $snapshot-list-item-bg;
+  color: $snapshot-list-item-color;
+
+  cursor: pointer;
+
+  transition: all $snapshot-list-transition;
+
+  &:hover {
+    background-color: $snapshot-list-item-hover-bg;
+    color: white;
+  }
+  h4 {
+    @include snapshot-list__h4;
+    padding-bottom: $small-spacing-unit / 2
+  }
+  h6 {
+    @include snapshot-list__h4;
+    padding-top: $small-spacing-unit / 2;
+  }
+}

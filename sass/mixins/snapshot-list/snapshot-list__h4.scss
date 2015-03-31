@@ -1,0 +1,8 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@mixin snapshot-list__h4 {
+  padding: $small-spacing-unit $base-spacing-unit;
+  margin: 0;
+}

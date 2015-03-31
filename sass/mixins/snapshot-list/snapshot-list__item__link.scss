@@ -1,0 +1,26 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@import "mixins/utils/pull-left";
+
+@mixin snapshot-list__item__link {
+  flex-basis: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-left: 1px solid white;
+
+  text-align: center;
+  text-decoration: none;
+  color: $color-400-grey;
+
+  transition: all $snapshot-list-transition;
+
+  &:hover {
+    background-color: $snapshot-list-active-item-hover;
+    color: white;
+  }
+}

@@ -1,0 +1,17 @@
+@import "palette.scss";
+@import "dimensions.scss";
+@import "typography.scss";
+
+@import "mixins/utils/clearfix.scss";
+@import "mixins/snapshot-list/snapshot-list__h4";
+
+@mixin snapshot-list__header {
+
+  @include clearfix;
+  background-color: $snapshot-list-header-bg;
+  text-transform: uppercase;
+
+  h4 {
+    @include snapshot-list__h4;
+  }
+}

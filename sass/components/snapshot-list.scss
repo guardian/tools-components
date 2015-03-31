@@ -1,0 +1,55 @@
+@import "mixins/snapshot-list/snapshot-list__header.scss";
+@import "mixins/snapshot-list/snapshot-list__decal.scss";
+@import "mixins/snapshot-list/snapshot-list__content.scss";
+@import "mixins/snapshot-list/snapshot-list__items.scss";
+@import "mixins/snapshot-list/snapshot-list__item.scss";
+@import "mixins/snapshot-list/snapshot-list__item--active.scss";
+@import "mixins/snapshot-list/snapshot-list__item__content.scss";
+@import "mixins/snapshot-list/snapshot-list__item__index.scss";
+@import "mixins/snapshot-list/snapshot-list__item__link.scss";
+@import "mixins/snapshot-list/snapshot-list__item__restore.scss";
+@import "mixins/snapshot-list/snapshot-list__item__footer.scss";
+
+.snapshot-list__header {
+  @include snapshot-list__header;
+}
+
+.snapshot-list__header__decal {
+  @include snapshot-list__decal;
+}
+
+.snapshot-list__header__content {
+  @include snapshot-list__content;
+}
+
+.snapshot-list__items {
+  @include snapshot-list__items;
+}
+
+.snapshot-list__item {
+  @include snapshot-list__item;
+}
+
+.snapshot-list__item--active {
+  @include snapshot-list__item--active;
+}
+
+.snapshot-list__item__content {
+  @include snapshot-list__item__content;
+}
+
+.snapshot-list__item__index {
+  @include snapshot-list__item__index;
+}
+
+.snapshot-list__item__link {
+  @include snapshot-list__item__link;
+}
+
+.snapshot-list__item__restore {
+  @include snapshot-list__item__restore;
+}
+
+.snapshot-list__item__footer {
+  @include snapshot-list__item__footer;
+}

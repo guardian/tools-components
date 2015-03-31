@@ -1,0 +1,15 @@
+<li>
+  <div class="snapshot-list__item">
+    <div class="snapshot-list__item__index">
+      <h4>{{ index }}</h4>
+    </div>
+    <div class="snapshot-list__item__content">
+      <h4>{{ relativeTime }}</h4>
+      <h6>{{ createdDate }}</h6>
+    </div>
+  </div>
+  <div ng-hide="!deltaTime" class="snapshot-list__item__footer" ng-mouseover="showDetails = true" ng-mouseleave="showDetails = false">
+    <gu-icon variant="expand-disabled"></gu-icon>
+    <h6 ng-class="{ hidden: !showDetails }">{{ deltaTime }}</h6>
+  </div>
+</li>
