@@ -8,6 +8,7 @@
 @import "mixins/snapshot-list/snapshot-list__item__index.scss";
 @import "mixins/snapshot-list/snapshot-list__item__link.scss";
 @import "mixins/snapshot-list/snapshot-list__item__restore.scss";
+@import "mixins/snapshot-list/snapshot-list__item__footer.scss";
 
 .snapshot-list__header {
   @include snapshot-list__header;
@@ -47,4 +48,8 @@
 
 .snapshot-list__item__restore {
   @include snapshot-list__item__restore;
+}
+
+.snapshot-list__item__footer {
+  @include snapshot-list__item__footer;
 }

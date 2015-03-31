@@ -1,6 +1,7 @@
 $num-of-columns: 12;
 
 $base-spacing-unit: 10px;
+$very-small-spacing-unit: ($base-spacing-unit / 4);
 $small-spacing-unit: ($base-spacing-unit / 2);
 $large-spacing-unit: ($base-spacing-unit * 1.5);
 $very-large-spacing-unit: ($base-spacing-unit * 3);
