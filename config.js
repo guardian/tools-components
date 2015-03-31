@@ -14,7 +14,7 @@ System.config({
     "cutandpastey/plugin-svg": "github:cutandpastey/plugin-svg@0.2.0",
     "js-beautify": "npm:js-beautify@1.5.5",
     "json": "github:systemjs/plugin-json@0.1.0",
-    "moment": "github:moment/moment@2.9.0",
+    "moment": "npm:moment@2.9.0",
     "moment/moment": "github:moment/moment@2.9.0",
     "svg": "github:cutandpastey/plugin-svg@0.2.0",
     "systemjs/plugin-text": "github:systemjs/plugin-text@0.0.2",
@@ -141,6 +141,9 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "minimist": "npm:minimist@0.0.8",
       "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:moment@2.9.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:nopt@3.0.1": {
