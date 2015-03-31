@@ -31,7 +31,4 @@
     "slug": "/components/snapshot-list",
     "template": "app/templates/snapshot-list.html"
   }
-
-
-
 ]

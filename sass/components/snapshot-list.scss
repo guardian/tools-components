@@ -1,4 +1,3 @@
-@import "mixins/snapshot-list/snapshot-list.scss";
 @import "mixins/snapshot-list/snapshot-list__header.scss";
 @import "mixins/snapshot-list/snapshot-list__decal.scss";
 @import "mixins/snapshot-list/snapshot-list__content.scss";
@@ -9,10 +8,6 @@
 @import "mixins/snapshot-list/snapshot-list__item__index.scss";
 @import "mixins/snapshot-list/snapshot-list__item__link.scss";
 @import "mixins/snapshot-list/snapshot-list__item__restore.scss";
-
-.snapshot-list {
-  @include snapshot-list();
-}
 
 .snapshot-list__header {
   @include snapshot-list__header;
