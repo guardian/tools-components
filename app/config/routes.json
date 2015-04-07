@@ -26,5 +26,9 @@
   {
     "slug": "/components/page-label",
     "template": "app/templates/page-label.html"
+  },
+  {
+    "slug": "/components/index-list",
+    "template": "app/templates/index-list.html"
   }
 ]
