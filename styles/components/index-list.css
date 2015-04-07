@@ -1,0 +1,35 @@
+.index-list {
+  padding-left: 0; }
+
+.index-list__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.index-list__item__index {
+  box-sizing: border-box;
+  -webkit-flex-basis: 46px;
+      -ms-flex-preferred-size: 46px;
+          flex-basis: 46px;
+  max-width: 46px;
+  padding: 5px;
+  text-align: center;
+  border-right: 2px solid #BDBDBD; }
+
+.index-list__item--primary {
+  background: white; }
+
+.index-list__item--secondary {
+  background: #F1F1F1; }
+
+.index-list__item--tertiary {
+  background: #dee2e3; }
+
+.index-list__item--quaternary {
+  background: #898984; }
