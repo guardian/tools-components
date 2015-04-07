@@ -5,9 +5,27 @@
       <h2>Snapshot List</h2>
       <app-demo-code>
         <gu-snapshot-list>
-          <gu-snapshot-list-item json-href="#" restore-href="#" created="2015-03-23T16:37:06.259Z" active="true"></gu-snapshot-list-item>
+          <gu-snapshot-list-item json-href="#" restore-href="#" created="2015-03-23T16:37:06.259Z" active="true">
+            <div class="snapshot-list__item__index">
+              <h4>{{ index }}</h4>
+            </div>
+
+            <div class="snapshot-list__item__content">
+              <h4>14 days ago</h4>
+              <h6>9:47:06 24 March 2015</h6>
+            </div>
+
+            <a  href="{{ jsonHref }}" class="snapshot-list__item__link">JSON</a>
+
+            <a  href="{{ restoreHref }}" class="snapshot-list__item__restore">
+              <gu-icon variant="wrench-disabled"></gu-icon>
+              Restore
+            </a>
+
+
+          </gu-snapshot-list-item>
+
           <gu-snapshot-list-item json-href="#" restore-href="#" created="2015-03-24T09:47:06.204Z"></gu-snapshot-list-item>
-          <gu-snapshot-list-item json-href="#" restore-href="#" created="2015-03-24T09:52:07.223Z"></gu-snapshot-list-item>
         </gu-snapshot-list>
       </app-demo-code>
     </app-demo>

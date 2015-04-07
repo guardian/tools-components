@@ -1,4 +1,4 @@
-<li>
+<li ng-if="active !== 'true'">
   <div class="snapshot-list__item">
     <div class="snapshot-list__item__index">
       <h4>{{ index }}</h4>
@@ -9,6 +9,14 @@
     </div>
   </div>
   <div ng-hide="!deltaTime" class="snapshot-list__item__footer" ng-mouseover="showDetails = true" ng-mouseleave="showDetails = false">
+    <gu-icon variant="expand-disabled"></gu-icon>
+    <h6 ng-class="{ hidden: !showDetails }">{{ deltaTime }}</h6>
+  </div>
+</li>
+
+<li ng-if="active === 'true'">
+  <div class="snapshot-list__item--active" ng-transclude></div>
+  <div class="snapshot-list__item__footer" ng-mouseover="showDetails = true" ng-mouseleave="showDetails = false">
     <gu-icon variant="expand-disabled"></gu-icon>
     <h6 ng-class="{ hidden: !showDetails }">{{ deltaTime }}</h6>
   </div>
