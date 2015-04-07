@@ -19,7 +19,7 @@ $skew-amount: 30deg;
   transform: skewX($skew);
 }
 
-@mixin btn-arrow-right($background-color: $color-400-grey) {
+@mixin btn-arrow-right($background-color: $color-500-grey) {
   @include btn($background-color);
   background: none;
   border: none;
