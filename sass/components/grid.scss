@@ -3,6 +3,9 @@
 
 .row{
   @include row();
+  [variant=reverse] {
+    flex-direction: row-reverse;
+  }
 }
 
 @for $i from 1 through $num-of-columns {
