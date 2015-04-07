@@ -29,6 +29,9 @@ $_large-box-padding-vert  : 7px;
 
     }
   }
+  @else if $type == 'quaternary' {
+    background-color: $box-quaternary-bg;
+  }
 
   &[size=large] {
     padding: $_large-box-padding-vert $_large-box-padding-horix;
