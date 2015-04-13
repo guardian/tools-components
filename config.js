@@ -10,6 +10,7 @@ System.config({
   "map": {
     "angular": "github:angular/bower-angular@1.3.15",
     "angular-route": "github:angular/bower-angular-route@1.3.15",
+    "composer-components": "github:guardian/tools-components@0.5",
     "css": "github:systemjs/plugin-css@0.1.6",
     "cutandpastey/plugin-svg": "github:cutandpastey/plugin-svg@0.2.0",
     "js-beautify": "npm:js-beautify@1.5.5",
@@ -17,6 +18,15 @@ System.config({
     "svg": "github:cutandpastey/plugin-svg@0.2.0",
     "github:angular/bower-angular-route@1.3.15": {
       "angular": "github:angular/bower-angular@1.3.15"
+    },
+    "github:guardian/tools-components@0.5": {
+      "angular": "github:angular/bower-angular@1.3.15",
+      "angular-route": "github:angular/bower-angular-route@1.3.15",
+      "css": "github:systemjs/plugin-css@0.1.6",
+      "cutandpastey/plugin-svg": "github:cutandpastey/plugin-svg@0.2.0",
+      "js-beautify": "npm:js-beautify@1.5.5",
+      "json": "github:systemjs/plugin-json@0.1.0",
+      "svg": "github:cutandpastey/plugin-svg@0.2.0"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
