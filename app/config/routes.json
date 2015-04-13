@@ -30,5 +30,9 @@
   {
     "slug": "/components/index-list",
     "template": "app/templates/index-list.html"
+  },
+  {
+    "slug": "/components/loading-bars",
+    "template": "app/templates/loading-bars.html"
   }
 ]
