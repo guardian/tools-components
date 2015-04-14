@@ -22,5 +22,17 @@
   {
     "slug": "/components/dropdowns",
     "template": "app/templates/dropdown.html"
+  },
+  {
+    "slug": "/components/page-label",
+    "template": "app/templates/page-label.html"
+  },
+  {
+    "slug": "/components/index-list",
+    "template": "app/templates/index-list.html"
+  },
+  {
+    "slug": "/components/loading-bars",
+    "template": "app/templates/loading-bars.html"
   }
 ]

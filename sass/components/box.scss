@@ -12,3 +12,6 @@
   @include box("tertiary");
 }
 
+.box--quaternary {
+  @include box("quaternary");
+}

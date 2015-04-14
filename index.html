@@ -26,35 +26,58 @@
 
 </head>
 <body>
+
 <main ng-app="gu-components-app">
 
-  <gu-row>
-    <gu-column class="composer-icon" span="4" gu-box="secondary" size="large">
-      <gu-icon variant="composer-icon"></gu-icon>
-    </gu-column>
+<!-- HEADER -->
+<gu-row skin="header">
+  <gu-column span="2">
+    <gu-row>
+      <!-- COMPOSER ICON -->
+      <gu-column span="2" gu-box="tertiary" skin="header">
+        <gu-icon class="composer-icon" variant="composer-icon"></gu-icon>
+      </gu-column>
+      <!-- PAGE STATUS -->
+      <gu-column flex span="6" >
+        <gu-page-label skin=header>
+          Components
+          <gu-page-label-hover>
+            <a href="/">Home</a>
+          </gu-page-label-hover>
+        </gu-page-label>
+      </gu-column>
+      <gu-column span="4" gu-box="tertiary"></gu-column>
+    </gu-row>
+  </gu-column>
+  <!-- MAIN HEADER -->
+  <gu-column span="10" gu-box="tertiary" skin="header"></gu-column>
+</gu-row>
 
-    <gu-column span="8" gu-box="secondary" size="large">
-      Main section
-    </gu-column>
-  </gu-row>
-
-  <gu-row class="content">
-    <gu-column class="sidebar" span="2" gu-box="tertiary">
-      <ul>
-        <li><a href="#/components/icons">Icons</a></li>
-        <li><a href="#/components/boxes">Boxes</a></li>
-        <li><a href="#/components/buttons">Buttons</a></li>
-        <li><a href="#/components/grid">Grid</a></li>
-        <li><a href="#/components/status">Status</a></li>
-        <li><a href="#/components/dropdowns">Dropdown</a></li>
-      </ul>
-    </gu-column>
-    <gu-column span="10" class="container">
-      <div ng-view>Loading</div>
-    </gu-column>
-  </gu-row>
+<!-- CONTENT -->
+<gu-row class="content">
+  <!-- SIDEBAR -->
+  <gu-column class="sidebar" span="2" gu-box="secondary">
+    <ul>
+      <li><a href="#/components/icons">Icons</a></li>
+      <li><a href="#/components/boxes">Boxes</a></li>
+      <li><a href="#/components/buttons">Buttons</a></li>
+      <li><a href="#/components/grid">Grid</a></li>
+      <li><a href="#/components/status">Status</a></li>
+      <li><a href="#/components/dropdowns">Dropdown</a></li>
+      <li><a href="#/components/page-label">Page Label</a></li>
+      <li><a href="#/components/index-list">Index List</a></li>
+      <li><a href="#/components/loading-bars">Loading Bars</a></li>
+    </ul>
+  </gu-column>
+  <!-- MAIN CONTENT -->
+  <gu-column span="10" class="container">
+    <div ng-view>Loading</div>
+  </gu-column>
+</gu-row>
 
 </main>
+
+
 <!-- LOAD JS -->
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
