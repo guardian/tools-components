@@ -39,21 +39,35 @@ export default (releaseType) => {
         throw new Error('Usage ./bin/release <version-number | major | minor | patch | build>');
       }
 
+      //reset current branch
       console.log('- Performing reset'.green);
       yield spawn('git', ['reset', '--hard']).progress(printProgress);
 
+      //checkout stable branch
       console.log(`- Checking out ${STABLE_BRANCH}`.green);
       yield spawn('git', ['checkout', STABLE_BRANCH]).progress(printProgress);
 
-      console.log('- Running build'.green);
-      yield spawn('npm', ['run', 'build']).progress(printProgress);
+      //pull any changes to stable branch
+      console.log(`- Checking out ${STABLE_BRANCH}`.green);
+      yield spawn('git', ['pull', 'origin', STABLE_BRANCH]).progress(printProgress);
 
+      //checkout the dist branch
       console.log(`- Checking out ${DIST_BRANCH}`.green);
       yield spawn('git', ['checkout', DIST_BRANCH]).progress(printProgress);
 
+      //reset it to the origin version
+      console.log(`- Checking out ${DIST_BRANCH}`.green);
+      yield spawn('git', ['rest', '--hard', 'origin'. DIST_BRANCH]).progress(printProgress);
+
+      //merge in stable branch
       console.log(`- Merging ${STABLE_BRANCH}`.green);
       yield spawn('git', ['merge', STABLE_BRANCH]).progress(printProgress);
 
+      //run the build
+      console.log('- Running build'.green);
+      yield spawn('npm', ['run', 'build']).progress(printProgress);
+
+      //remove ignored built files
       let ignoreFilePath = path.resolve(__dirname, '../../.gitignore');
 
       if (!fs.existsSync(ignoreFilePath)) {
