@@ -11,6 +11,17 @@
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row; }
+  .index-list__item[variant=primary] {
+    background: white;
+    -webkit-transition: background-color .2s ease-in-out;
+            transition: background-color .2s ease-in-out; }
+  .index-list__item[variant=secondary] {
+    background: #F1F1F1; }
+  .index-list__item[variant=tertiary] {
+    background: #dee2e3; }
+  .index-list__item[variant=quaternary] {
+    background: #898984;
+    color: white; }
 
 .index-list__item__index {
   box-sizing: border-box;
@@ -19,17 +30,6 @@
           flex-basis: 46px;
   max-width: 46px;
   padding: 5px;
+  padding-top: 10px;
   text-align: center;
   border-right: 2px solid #BDBDBD; }
-
-.index-list__item--primary {
-  background: white; }
-
-.index-list__item--secondary {
-  background: #F1F1F1; }
-
-.index-list__item--tertiary {
-  background: #dee2e3; }
-
-.index-list__item--quaternary {
-  background: #898984; }
