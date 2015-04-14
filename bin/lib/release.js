@@ -57,7 +57,7 @@ export default (releaseType) => {
 
       //reset it to the origin version
       console.log(`- Checking out ${DIST_BRANCH}`.green);
-      yield spawn('git', ['rest', '--hard', 'origin'. DIST_BRANCH]).progress(printProgress);
+      yield spawn('git', ['reset', '--hard', 'origin'. DIST_BRANCH]).progress(printProgress);
 
       //merge in stable branch
       console.log(`- Merging ${STABLE_BRANCH}`.green);
