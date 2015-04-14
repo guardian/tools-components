@@ -14,13 +14,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -1;
   //hide it
   opacity: 0;
   pointer-events: none;
   transition: opacity .2s ease-in;
   &.open {
-    z-index: 10;
     opacity: 1;
     pointer-events: auto;
   }
