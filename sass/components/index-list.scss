@@ -13,20 +13,3 @@
 .index-list__item__index {
   @include index-list__item__index;
 }
-
-.index-list__item--primary {
-  background: $box-primary-bg;
-}
-
-.index-list__item--secondary {
-  background: $box-secondary-bg;
-}
-
-.index-list__item--tertiary {
-  background: $box-tertiary-bg;
-}
-
-.index-list__item--quaternary {
-  background: $box-quaternary-bg;
-}
-

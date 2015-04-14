@@ -13,8 +13,8 @@ $button-color: white;
   $button-hover-bg: darken($button-bg, 8%);
   $button-active-bg: darken($button-bg, 16%);
   //TODO (jp-18-3-15) need to check this is the right transform
-  $button-disabled-bg: lighten($button-bg, 16%);
-  $button-disabled-color: lighten($button-bg, 32%);
+  $button-disabled-bg: lighten($color-400-grey, 16%);
+  $button-disabled-color: lighten($color-400-grey, 32%);
 
 
   //resets (for <button></button> elements
