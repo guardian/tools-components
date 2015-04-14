@@ -34,5 +34,9 @@
   {
     "slug": "/components/loading-bars",
     "template": "app/templates/loading-bars.html"
+  },
+  {
+    "slug": "/components/accordion",
+    "template": "app/templates/accordion.html"
   }
 ]
