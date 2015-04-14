@@ -2,6 +2,36 @@
 @import "dimensions.scss";
 @import "typography.scss";
 
-@mixin modal() {
-  //your code goes here
+@mixin modal {
+  //position
+  position: fixed;
+  top: 0;
+  left: 0;
+  //dimensions
+  width: 100%;
+  height: 100%;
+  //center children
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  //hide it
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease-in;
+  &.open {
+    z-index: 10;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  &:before {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
