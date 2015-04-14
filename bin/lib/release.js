@@ -51,8 +51,8 @@ export default (releaseType) => {
       console.log(`- Checking out ${DIST_BRANCH}`.green);
       yield spawn('git', ['checkout', DIST_BRANCH]).progress(printProgress);
 
-      console.log(`- Merging ${DIST_BRANCH}`.green);
-      yield spawn('git', ['merge', DIST_BRANCH]).progress(printProgress);
+      console.log(`- Merging ${STABLE_BRANCH}`.green);
+      yield spawn('git', ['merge', STABLE_BRANCH]).progress(printProgress);
 
       let ignoreFilePath = path.resolve(__dirname, '../../.gitignore');
 
