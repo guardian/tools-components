@@ -1,6 +1,6 @@
 {
   "name": "composer-components",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "description": "Reusable UI Components for Composer",
   "main": "lib/gu-components",
