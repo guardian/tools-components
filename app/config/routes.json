@@ -38,5 +38,9 @@
   {
     "slug": "/components/modal",
     "template": "app/templates/modal.html"
+  },
+  {
+    "slug": "/components/accordion",
+    "template": "app/templates/accordion.html"
   }
 ]
