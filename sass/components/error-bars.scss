@@ -1,15 +1,15 @@
 @import "mixins/error-bars/error-bars.scss";
 
-.error-bar {
+.gu-error-bar {
   @include error-bars();
 }
 
-.warning-bar {
+.gu-warning-bar {
   @include error-bars();
   position: relative;
   color: white;
 
-  .warning-icon {
+  .gu-warning-icon {
     position: absolute;
     left: 8px;
     top: 8px;
