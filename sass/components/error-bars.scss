@@ -1,0 +1,17 @@
+@import "mixins/error-bars/error-bars.scss";
+
+.gu-error-bar {
+  @include error-bars();
+}
+
+.gu-warning-bar {
+  @include error-bars();
+  position: relative;
+  color: white;
+
+  .gu-warning-icon {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+  }
+}

@@ -1,0 +1,52 @@
+<gu-row>
+  <gu-column span="12">
+    <app-demo>
+      <h2>Error Bar</h2>
+      <app-demo-code>
+
+        <gu-row>
+          <gu-column span="12">
+            <gu-error-bar variant="dismissable" when="true">This is an error message</gu-error-bar>
+          </gu-column>
+        </gu-row>
+
+      </app-demo-code>
+    </app-demo>
+  </gu-column>
+</gu-row>
+
+<gu-row>
+  <gu-column span="12">
+    <app-demo>
+      <h2>Warning Bar</h2>
+      <app-demo-code>
+
+        <gu-row>
+          <gu-column span="12">
+            <gu-error-bar variant="warning" when="true">This is an error message</gu-error-bar>
+          </gu-column>
+        </gu-row>
+
+      </app-demo-code>
+    </app-demo>
+  </gu-column>
+</gu-row>
+
+<gu-row>
+  <gu-column span="12">
+    <app-demo>
+      <h2>Error Bar (hidden)</h2>
+      <app-demo-code>
+
+        <gu-row>
+          <gu-column span="12">
+            <gu-error-bar variant="dismissable" when="isVisible">This is an error message</gu-error-bar>
+            <gu-btn ng-click="isVisible = true">Show</gu-btn>
+          </gu-column>
+        </gu-row>
+
+      </app-demo-code>
+    </app-demo>
+  </gu-column>
+</gu-row>
+

@@ -42,5 +42,9 @@
   {
     "slug": "/components/accordion",
     "template": "app/templates/accordion.html"
+  },
+  {
+    "slug": "/components/error-bars",
+    "template": "app/templates/error-bars.html"
   }
 ]
