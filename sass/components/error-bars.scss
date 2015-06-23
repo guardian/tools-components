@@ -1,0 +1,5 @@
+@import "mixins/error-bars/error-bars.scss";
+
+.error-bars {
+  @include error-bars();
+}

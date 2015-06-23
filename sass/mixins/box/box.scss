@@ -33,6 +33,14 @@ $_large-box-padding-vert  : 7px;
     background-color: $box-quaternary-bg;
   }
 
+  @else if $type == 'error' {
+    background-color: $box-error-bg;
+  }
+
+  @else if $type == 'warning' {
+    background-color: $box-warning-bg;
+  }
+
   &[size=large] {
     padding: $_large-box-padding-vert $_large-box-padding-horix;
   }
