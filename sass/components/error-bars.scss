@@ -1,5 +1,17 @@
 @import "mixins/error-bars/error-bars.scss";
 
-.error-bars {
+.error-bar {
   @include error-bars();
+}
+
+.warning-bar {
+  @include error-bars();
+  position: relative;
+  color: white;
+
+  .warning-icon {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+  }
 }
