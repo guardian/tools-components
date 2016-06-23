@@ -1,3 +1,5 @@
+##Deprecated - Was only used in a single product.
+
 Composer UI Components
 ---------
 
